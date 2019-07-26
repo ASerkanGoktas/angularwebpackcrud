@@ -1,0 +1,18 @@
+<label for="Search">Search: </label>
+<input ng-model="$ctrl.query">
+<a href="#!/add"><button>Add product</button></a>
+<table>
+    <tr>
+        <th>ID </th>
+        <th>Name</th>
+        <th>Detail</th>
+    </tr>
+    <tr ng-repeat="product in $ctrl.products | filter:$ctrl.query">
+        <td>{{product.ID}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.detail}}</td>
+        <td><a href="#!/edit/{{product.ID}}"><button>Edit</button></a></td>
+        <td><a href="#!/detail/{{product.ID}}"><button>Detail</button></a></td>
+        <td><a href="#!/delete/{{product.ID}}"><button>Delete</button></a></td>
+    </tr>
+</table>
