@@ -1,0 +1,23 @@
+<ul class="list-group list-group-horizontal">
+    <li class="list-group-item">{{"ID: "+$ctrl.product.ID}}</li>
+    <li class="list-group-item">{{"Name: "+$ctrl.product.name}}</li>
+    <li class="list-group-item">{{"Detail: "+$ctrl.product.detail}}</li>
+    <li class="list-group-item">{{"Detail: "+$ctrl.product.number_in_stock}}</li>
+</ul>
+
+
+<form name="$ctrl.updateProductForm" ng-submit="$ctrl.submit_update($ctrl.updateProductForm)">
+        <div class="form-group col-md-2 m-4 p-4 border border-primary" style="border-radius: 10%">
+            <label for="Name">Product Name:</label>
+            <input type="text" class="form-control" name="Name" ng-model="$ctrl.name"></input>
+                        
+            <label for="Detail" class="mt-1">Detail:</label>
+            <input type="text"  class="form-control mt-1" name="Detail" ng-model="$ctrl.detail"></input>
+
+            <label for="Number" class="mt-1">Number of products:</label>
+            <input type="text"  class="form-control mt-1" name="Number" ng-model="$ctrl.number_in_stock"></input>
+            
+            <button type="submit" ng-class=" 'btn btn-primary ' + $ctrl.validateForm($ctrl.updateProductForm) +' mt-3'  " ng-click="$ctrl.update()">Update product</button>
+        </div>
+    </form>
+
