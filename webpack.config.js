@@ -5,8 +5,7 @@ module.exports = {
     mode:"development",
     devtool:"source-map",
     entry:{
-        app:"./src/app/app.module.js",
-        appconfig: "./src/app/app.config.js"
+        app:"./src/app/app.module.js"
     },
     output:{
         path: path.resolve(__dirname, "dist")
@@ -15,6 +14,7 @@ module.exports = {
         rules:[
             {
                 test: /\.html$/,
+                exclude: /(node_modules|bower_components)/,
                 use: {
                     loader:"html-loader"
                 }
@@ -29,6 +29,11 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use:["style-loader" ,"css-loader"]
+                
             }
         ],
         

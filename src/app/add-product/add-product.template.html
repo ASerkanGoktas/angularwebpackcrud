@@ -1,10 +1,15 @@
-<form>
-    <label for="Name">Product Name:</label>
-    <input name="Name" ng-model="$ctrl.name"></input>
+<form name="addProductForm">
+    <div class="form-group col-md-2 m-4 p-4 border border-primary" style="border-radius: 10%">
+        <label for="Name">Product Name:</label>
+        <input type="text" class="form-control" name="Name" ng-model="$ctrl.name"></input>
 
-    <label for="Detail">Detail:</label>
-    <input name="Detail" ng-model="$ctrl.detail"></input>
-    
-    <button ng-click="$ctrl.add()">Add product</button>
+        <label for="Detail" class="mt-1">Detail:</label>
+        <input type="text" class="form-control mt-1" name="Detail" ng-model="$ctrl.detail"></input>
+
+        <label for="Number" class="mt-1">Number of products:</label>
+        <input type="text" class="form-control mt-1" name="Number" ng-model="$ctrl.number_in_stock"></input>
+        
+        <button type="button" class="btn btn-primary mt-3" ng-click="$ctrl.add()">Add product</button>
+    </div>
 </form>
 

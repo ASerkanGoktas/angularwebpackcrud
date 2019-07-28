@@ -1,18 +1,45 @@
-<label for="Search">Search: </label>
-<input ng-model="$ctrl.query">
-<a href="#!/add"><button>Add product</button></a>
-<table>
-    <tr>
+<!-- Input field for filtering products and 'add button'-->
+
+<div class="input-group my-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text">Filter Products:</span>
+    </div>
+    
+    <div class="col-xs-2">
+        <input ng-model="$ctrl.query" type="text" class="form-control" placeholder="..." aria-label="Filter" aria-describedby="basic-addon1">
+    </div>
+    
+    <div class="ml-2">
+        <a href="#!/add"><button type="button" class="btn btn-primary">Add product</button></a>
+    </div>
+     
+</div>
+
+<!-- Table of products -->
+<table class="table table-striped">
+    <thead class= "thead-dark">
+        <tr>
         <th>ID </th>
         <th>Name</th>
         <th>Detail</th>
-    </tr>
+        <th>Number in stock</th>
+        <th></th>
+        
+        </tr>
+    </thead>
+    <tbody>
     <tr ng-repeat="product in $ctrl.products | filter:$ctrl.query">
         <td>{{product.ID}}</td>
         <td>{{product.name}}</td>
         <td>{{product.detail}}</td>
-        <td><a href="#!/edit/{{product.ID}}"><button>Edit</button></a></td>
-        <td><a href="#!/detail/{{product.ID}}"><button>Detail</button></a></td>
-        <td><a href="#!/delete/{{product.ID}}"><button>Delete</button></a></td>
+        <td>{{product.number_in_stock}}</td>
+        <td>
+            <span><a href="#!/edit/{{product.ID}}"><button type="button" class="btn btn-secondary" ng-click="$ctrl.saveData(product)">Edit</button></a></span>
+            <span><a href="#!/detail/{{product.ID}}"><button type="button" class="btn btn-info" ng-click="$ctrl.saveData(product)">Detail</button></a></span>
+        <span><a href="#!/delete/{{product.ID}}"><button type="button" class="btn btn-danger" ng-click="$ctrl.saveData(product)">Delete</button></a></span>
+        </td>
+        
+        
     </tr>
+    </tbody>
 </table>
