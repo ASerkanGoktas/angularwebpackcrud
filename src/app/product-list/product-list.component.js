@@ -1,37 +1,33 @@
 import tpl from './product-list.template.html';
 
 class ProductListContoller{
-    constructor(RESTservice)
+   
+   
+    constructor($http)
     {
 
-        this._rest=RESTservice;
+        
+        this.products=[];
+        const root= "http://localhost:63038/api/Deneme";
 
-        this.products = [
-            {
-                ID:12,
-                name:"kitap",
-                detail:"güzel",
-                number_in_stock:4
+        const self=this;
+        $http.get(root).then((response)=>{
 
-            },
-            {
-                ID:21,
-                name:"kitap",
-                detail:"kötü",
-                number_in_stock:2
+            //Success
+            self.products=response.data;
+        },
 
-            },
-            {
-                ID:12,
-                name:"eyy",
-                detail:"yoo",
-                number_in_stock:5
+        (error)=>{
 
-            }]
+        }
+        
+        );
+        
+
     }
 
-    saveData(product){
-        this._rest.setData(product);
+    onSuccess(){
+
     }
 }
 
@@ -40,4 +36,4 @@ class ProductListContoller{
     controller: ProductListContoller
 }
 
-
+ProductListContoller.$inject=["$http"];

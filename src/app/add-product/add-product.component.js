@@ -3,17 +3,38 @@ import tpl from "./add-product.template.html"
 
 class AddProductController{
     
-    constructor(RESTservice){
-        this._rest=RESTservice;
-        
+    constructor($http){
+        this.http=$http;
     }
 
-    add(){
-        this._rest.addProduct({
-            "id": 0, 
-            "name": this.name, 
-            "detail": this.detail
-        });
+    submit_add(form){
+        
+        if(form.$valid){
+            let data={
+                ID:0,
+                Name:this.name,
+                Detail:this.detail,
+                NumberStock: this.number
+            };
+    
+            const root="http://localhost:63038/api/Deneme";
+
+            const self=this;
+            this.http.post(root, data).then((response)=>{
+
+                //Success
+                self.response="Success!";
+            },
+
+            (response)=>{
+                //Failure
+                
+                self.response="Error adding product! Error code: "+response.status;
+            });
+        }else{
+            this.response="There is a problem about inputs";
+        }
+
     }
 }
 
@@ -22,4 +43,4 @@ export default{
     controller: AddProductController
 }
 
-AddProductController.$inject=["RESTservice"];
+AddProductController.$inject=["$http"];

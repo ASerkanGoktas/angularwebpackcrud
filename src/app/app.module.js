@@ -4,6 +4,7 @@ import productListModule from './product-list/product-list.module';
 import addProductModule from './add-product/add-product.module';
 import updateProductModule from './update-product/update-product.module';
 import deleteProductModule from './delete-product/delete-product.module';
+import ngMessages from 'angular-messages';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -12,7 +13,8 @@ angular.module('productApp', [
     addProductModule,
     updateProductModule,
     deleteProductModule,
-    ngRoute
+    ngRoute,
+    ngMessages
     
     
 ]).config(['$routeProvider',
@@ -33,22 +35,22 @@ function config($routeProvider){
 
 }
 
-]).factory("RESTservice", ['$http',($http)=>{
+])/*.factory("Productservice", ['$http',($http)=>{
     const root= "http://localhost:63038/api/Deneme";
-    let savedData={};
+    
     return {
 
-        getAll: ()=>{
-            $http.get(root).then((response)=>{return response});
+        getAll: (onSuccess)=>{
+            $http.get(root).then(onSuccess)
         },
         addProduct: (data)=>{
-            $http.post(root, data).then((response)=>{return response});
+            $http.post(root, data).then();
         },
         updateProduct:(data)=>{
-            $http.put(root+"/"+data.id, data).then((response)=>{return response});
+            $http.put(root+"/"+data.id, data);
         },
         deleteProduct:(id)=>{
-            $http.delete(root+"/"+id).then((response)=>{return response});
+            $http.delete(root+"/"+id);
         },
         setData:(data)=>{savedData=data},
         getData:()=>{return savedData}
@@ -56,5 +58,5 @@ function config($routeProvider){
     
     
     
-}]);
+}]);*/
 

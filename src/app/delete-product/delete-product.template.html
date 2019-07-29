@@ -1,7 +1,9 @@
-<span>{{$ctrl.product.ID}}</span>
-<span>{{$ctrl.product.name}}</span>
-<span>{{$ctrl.product.detail}}</span>
-<span>{{$ctrl.product.number_in_stock}}</span>
+<ul class="list-group list-group-horizontal">
+    <li class="list-group-item">{{"ID: "+$ctrl.product.ID}}</li>
+    <li class="list-group-item">{{"Name: "+$ctrl.product.Name}}</li>
+    <li class="list-group-item">{{"Detail: "+$ctrl.product.Detail}}</li>
+    <li class="list-group-item">{{"Number in stock: "+$ctrl.product.NumberStock}}</li>
+</ul>
 
-<button ng-click="$ctrl.delete()">Are you sure about deleting this item?</button>
+<button type="submit" class="btn btn-danger mt-2" ng-click="$ctrl.delete()">Are you sure about deleting this item?</button>
 

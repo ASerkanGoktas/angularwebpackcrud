@@ -1,15 +1,33 @@
-<form name="addProductForm">
+<form name="$ctrl.addProductForm" ng-submit="$ctrl.submit_add($ctrl.addProductForm)">
     <div class="form-group col-md-2 m-4 p-4 border border-primary" style="border-radius: 10%">
         <label for="Name">Product Name:</label>
-        <input type="text" class="form-control" name="Name" ng-model="$ctrl.name"></input>
-
+        <input type="text" class="form-control" name="Name" ng-model="$ctrl.name" ng-minlength="3" ng-required="true"></input>
+        <div ng-messages="$ctrl.addProductForm.Name.$error">
+            <span ng-message="required">Hata! yazı gir</span>
+            <span ng-message="minlength">Hata! az karakter</span>
+        </div>
+        
+                    
         <label for="Detail" class="mt-1">Detail:</label>
-        <input type="text" class="form-control mt-1" name="Detail" ng-model="$ctrl.detail"></input>
+        <input type="text"  class="form-control mt-1" name="Detail" ng-model="$ctrl.detail" ng-minlength="10" ng-required="true"></input>
+        <div ng-messages="$ctrl.addProductForm.Detail.$error">
+            <span ng-message="required">Hata! yazı gir</span>
+            <span ng-message="minlength">Hata! az karakter</span>
+        </div>
+
 
         <label for="Number" class="mt-1">Number of products:</label>
-        <input type="text" class="form-control mt-1" name="Number" ng-model="$ctrl.number_in_stock"></input>
+        <input type="text"  class="form-control mt-1" name="Number" ng-model="$ctrl.number" ng-required="true"></input>
         
-        <button type="button" class="btn btn-primary mt-3" ng-click="$ctrl.add()">Add product</button>
+        <div ng-messages="$ctrl.addProductForm.Number.$error">
+            <span ng-message="required">Hata! int gir</span>
+            <span ng-message="minlength">Hata! az karakter</span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary mt-3" ng-disabled="$ctrl.addProductForm.$invalid">Add product</button>
+
+        <div>{{$ctrl.response}}</div>
     </div>
 </form>
 

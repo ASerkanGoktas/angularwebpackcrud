@@ -21,7 +21,6 @@
         <tr>
         <th>ID </th>
         <th>Name</th>
-        <th>Detail</th>
         <th>Number in stock</th>
         <th></th>
         
@@ -30,9 +29,8 @@
     <tbody>
     <tr ng-repeat="product in $ctrl.products | filter:$ctrl.query">
         <td>{{product.ID}}</td>
-        <td>{{product.name}}</td>
-        <td>{{product.detail}}</td>
-        <td>{{product.number_in_stock}}</td>
+        <td>{{product.Name}}</td>
+        <td>{{product.NumberStock}}</td>
         <td>
             <span><a href="#!/edit/{{product.ID}}"><button type="button" class="btn btn-secondary" ng-click="$ctrl.saveData(product)">Edit</button></a></span>
             <span><a href="#!/detail/{{product.ID}}"><button type="button" class="btn btn-info" ng-click="$ctrl.saveData(product)">Detail</button></a></span>
