@@ -38731,6 +38731,28 @@ exports.push([module.i, "/*!\n * Bootstrap v4.3.1 (https://getbootstrap.com/)\n 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/webpack-icons-installer/bootstrap/bootstrap.css":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!(webpack)-icons-installer/bootstrap/bootstrap.css ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+var getUrl = __webpack_require__(/*! ../../css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(/*! ./glyphicons-halflings-regular.eot */ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.eot"));
+var ___CSS_LOADER_URL___1___ = getUrl(__webpack_require__(/*! ./glyphicons-halflings-regular.eot */ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.eot") + "?#iefix");
+var ___CSS_LOADER_URL___2___ = getUrl(__webpack_require__(/*! ./glyphicons-halflings-regular.woff2 */ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.woff2"));
+var ___CSS_LOADER_URL___3___ = getUrl(__webpack_require__(/*! ./glyphicons-halflings-regular.woff */ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.woff"));
+var ___CSS_LOADER_URL___4___ = getUrl(__webpack_require__(/*! ./glyphicons-halflings-regular.ttf */ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.ttf"));
+var ___CSS_LOADER_URL___5___ = getUrl(__webpack_require__(/*! ./glyphicons-halflings-regular.svg */ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.svg") + "#glyphicons_halflingsregular");
+// Module
+exports.push([module.i, "/*!\n * Bootstrap v3.3.7 (http://getbootstrap.com)\n * Copyright 2011-2016 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\n/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */\n\n@font-face {\n  font-family: 'Glyphicons Halflings';\n\n  src: url(" + ___CSS_LOADER_URL___0___ + ");\n  src: url(" + ___CSS_LOADER_URL___1___ + ") format('embedded-opentype'), \n\t  url(" + ___CSS_LOADER_URL___2___ + ") format('woff2'), \n\t  url(" + ___CSS_LOADER_URL___3___ + ") format('woff'), \n\t  url(" + ___CSS_LOADER_URL___4___ + ") format('truetype'), \n\t  url(" + ___CSS_LOADER_URL___5___ + ") format('svg');\n}\n.glyphicon {\n  position: relative;\n  top: 1px;\n  display: inline-block;\n  font-family: 'Glyphicons Halflings';\n  font-style: normal;\n  font-weight: normal;\n  line-height: 1;\n\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.glyphicon-asterisk:before {\n  content: \"\\002a\";\n}\n.glyphicon-plus:before {\n  content: \"\\002b\";\n}\n.glyphicon-euro:before,\n.glyphicon-eur:before {\n  content: \"\\20ac\";\n}\n.glyphicon-minus:before {\n  content: \"\\2212\";\n}\n.glyphicon-cloud:before {\n  content: \"\\2601\";\n}\n.glyphicon-envelope:before {\n  content: \"\\2709\";\n}\n.glyphicon-pencil:before {\n  content: \"\\270f\";\n}\n.glyphicon-glass:before {\n  content: \"\\e001\";\n}\n.glyphicon-music:before {\n  content: \"\\e002\";\n}\n.glyphicon-search:before {\n  content: \"\\e003\";\n}\n.glyphicon-heart:before {\n  content: \"\\e005\";\n}\n.glyphicon-star:before {\n  content: \"\\e006\";\n}\n.glyphicon-star-empty:before {\n  content: \"\\e007\";\n}\n.glyphicon-user:before {\n  content: \"\\e008\";\n}\n.glyphicon-film:before {\n  content: \"\\e009\";\n}\n.glyphicon-th-large:before {\n  content: \"\\e010\";\n}\n.glyphicon-th:before {\n  content: \"\\e011\";\n}\n.glyphicon-th-list:before {\n  content: \"\\e012\";\n}\n.glyphicon-ok:before {\n  content: \"\\e013\";\n}\n.glyphicon-remove:before {\n  content: \"\\e014\";\n}\n.glyphicon-zoom-in:before {\n  content: \"\\e015\";\n}\n.glyphicon-zoom-out:before {\n  content: \"\\e016\";\n}\n.glyphicon-off:before {\n  content: \"\\e017\";\n}\n.glyphicon-signal:before {\n  content: \"\\e018\";\n}\n.glyphicon-cog:before {\n  content: \"\\e019\";\n}\n.glyphicon-trash:before {\n  content: \"\\e020\";\n}\n.glyphicon-home:before {\n  content: \"\\e021\";\n}\n.glyphicon-file:before {\n  content: \"\\e022\";\n}\n.glyphicon-time:before {\n  content: \"\\e023\";\n}\n.glyphicon-road:before {\n  content: \"\\e024\";\n}\n.glyphicon-download-alt:before {\n  content: \"\\e025\";\n}\n.glyphicon-download:before {\n  content: \"\\e026\";\n}\n.glyphicon-upload:before {\n  content: \"\\e027\";\n}\n.glyphicon-inbox:before {\n  content: \"\\e028\";\n}\n.glyphicon-play-circle:before {\n  content: \"\\e029\";\n}\n.glyphicon-repeat:before {\n  content: \"\\e030\";\n}\n.glyphicon-refresh:before {\n  content: \"\\e031\";\n}\n.glyphicon-list-alt:before {\n  content: \"\\e032\";\n}\n.glyphicon-lock:before {\n  content: \"\\e033\";\n}\n.glyphicon-flag:before {\n  content: \"\\e034\";\n}\n.glyphicon-headphones:before {\n  content: \"\\e035\";\n}\n.glyphicon-volume-off:before {\n  content: \"\\e036\";\n}\n.glyphicon-volume-down:before {\n  content: \"\\e037\";\n}\n.glyphicon-volume-up:before {\n  content: \"\\e038\";\n}\n.glyphicon-qrcode:before {\n  content: \"\\e039\";\n}\n.glyphicon-barcode:before {\n  content: \"\\e040\";\n}\n.glyphicon-tag:before {\n  content: \"\\e041\";\n}\n.glyphicon-tags:before {\n  content: \"\\e042\";\n}\n.glyphicon-book:before {\n  content: \"\\e043\";\n}\n.glyphicon-bookmark:before {\n  content: \"\\e044\";\n}\n.glyphicon-print:before {\n  content: \"\\e045\";\n}\n.glyphicon-camera:before {\n  content: \"\\e046\";\n}\n.glyphicon-font:before {\n  content: \"\\e047\";\n}\n.glyphicon-bold:before {\n  content: \"\\e048\";\n}\n.glyphicon-italic:before {\n  content: \"\\e049\";\n}\n.glyphicon-text-height:before {\n  content: \"\\e050\";\n}\n.glyphicon-text-width:before {\n  content: \"\\e051\";\n}\n.glyphicon-align-left:before {\n  content: \"\\e052\";\n}\n.glyphicon-align-center:before {\n  content: \"\\e053\";\n}\n.glyphicon-align-right:before {\n  content: \"\\e054\";\n}\n.glyphicon-align-justify:before {\n  content: \"\\e055\";\n}\n.glyphicon-list:before {\n  content: \"\\e056\";\n}\n.glyphicon-indent-left:before {\n  content: \"\\e057\";\n}\n.glyphicon-indent-right:before {\n  content: \"\\e058\";\n}\n.glyphicon-facetime-video:before {\n  content: \"\\e059\";\n}\n.glyphicon-picture:before {\n  content: \"\\e060\";\n}\n.glyphicon-map-marker:before {\n  content: \"\\e062\";\n}\n.glyphicon-adjust:before {\n  content: \"\\e063\";\n}\n.glyphicon-tint:before {\n  content: \"\\e064\";\n}\n.glyphicon-edit:before {\n  content: \"\\e065\";\n}\n.glyphicon-share:before {\n  content: \"\\e066\";\n}\n.glyphicon-check:before {\n  content: \"\\e067\";\n}\n.glyphicon-move:before {\n  content: \"\\e068\";\n}\n.glyphicon-step-backward:before {\n  content: \"\\e069\";\n}\n.glyphicon-fast-backward:before {\n  content: \"\\e070\";\n}\n.glyphicon-backward:before {\n  content: \"\\e071\";\n}\n.glyphicon-play:before {\n  content: \"\\e072\";\n}\n.glyphicon-pause:before {\n  content: \"\\e073\";\n}\n.glyphicon-stop:before {\n  content: \"\\e074\";\n}\n.glyphicon-forward:before {\n  content: \"\\e075\";\n}\n.glyphicon-fast-forward:before {\n  content: \"\\e076\";\n}\n.glyphicon-step-forward:before {\n  content: \"\\e077\";\n}\n.glyphicon-eject:before {\n  content: \"\\e078\";\n}\n.glyphicon-chevron-left:before {\n  content: \"\\e079\";\n}\n.glyphicon-chevron-right:before {\n  content: \"\\e080\";\n}\n.glyphicon-plus-sign:before {\n  content: \"\\e081\";\n}\n.glyphicon-minus-sign:before {\n  content: \"\\e082\";\n}\n.glyphicon-remove-sign:before {\n  content: \"\\e083\";\n}\n.glyphicon-ok-sign:before {\n  content: \"\\e084\";\n}\n.glyphicon-question-sign:before {\n  content: \"\\e085\";\n}\n.glyphicon-info-sign:before {\n  content: \"\\e086\";\n}\n.glyphicon-screenshot:before {\n  content: \"\\e087\";\n}\n.glyphicon-remove-circle:before {\n  content: \"\\e088\";\n}\n.glyphicon-ok-circle:before {\n  content: \"\\e089\";\n}\n.glyphicon-ban-circle:before {\n  content: \"\\e090\";\n}\n.glyphicon-arrow-left:before {\n  content: \"\\e091\";\n}\n.glyphicon-arrow-right:before {\n  content: \"\\e092\";\n}\n.glyphicon-arrow-up:before {\n  content: \"\\e093\";\n}\n.glyphicon-arrow-down:before {\n  content: \"\\e094\";\n}\n.glyphicon-share-alt:before {\n  content: \"\\e095\";\n}\n.glyphicon-resize-full:before {\n  content: \"\\e096\";\n}\n.glyphicon-resize-small:before {\n  content: \"\\e097\";\n}\n.glyphicon-exclamation-sign:before {\n  content: \"\\e101\";\n}\n.glyphicon-gift:before {\n  content: \"\\e102\";\n}\n.glyphicon-leaf:before {\n  content: \"\\e103\";\n}\n.glyphicon-fire:before {\n  content: \"\\e104\";\n}\n.glyphicon-eye-open:before {\n  content: \"\\e105\";\n}\n.glyphicon-eye-close:before {\n  content: \"\\e106\";\n}\n.glyphicon-warning-sign:before {\n  content: \"\\e107\";\n}\n.glyphicon-plane:before {\n  content: \"\\e108\";\n}\n.glyphicon-calendar:before {\n  content: \"\\e109\";\n}\n.glyphicon-random:before {\n  content: \"\\e110\";\n}\n.glyphicon-comment:before {\n  content: \"\\e111\";\n}\n.glyphicon-magnet:before {\n  content: \"\\e112\";\n}\n.glyphicon-chevron-up:before {\n  content: \"\\e113\";\n}\n.glyphicon-chevron-down:before {\n  content: \"\\e114\";\n}\n.glyphicon-retweet:before {\n  content: \"\\e115\";\n}\n.glyphicon-shopping-cart:before {\n  content: \"\\e116\";\n}\n.glyphicon-folder-close:before {\n  content: \"\\e117\";\n}\n.glyphicon-folder-open:before {\n  content: \"\\e118\";\n}\n.glyphicon-resize-vertical:before {\n  content: \"\\e119\";\n}\n.glyphicon-resize-horizontal:before {\n  content: \"\\e120\";\n}\n.glyphicon-hdd:before {\n  content: \"\\e121\";\n}\n.glyphicon-bullhorn:before {\n  content: \"\\e122\";\n}\n.glyphicon-bell:before {\n  content: \"\\e123\";\n}\n.glyphicon-certificate:before {\n  content: \"\\e124\";\n}\n.glyphicon-thumbs-up:before {\n  content: \"\\e125\";\n}\n.glyphicon-thumbs-down:before {\n  content: \"\\e126\";\n}\n.glyphicon-hand-right:before {\n  content: \"\\e127\";\n}\n.glyphicon-hand-left:before {\n  content: \"\\e128\";\n}\n.glyphicon-hand-up:before {\n  content: \"\\e129\";\n}\n.glyphicon-hand-down:before {\n  content: \"\\e130\";\n}\n.glyphicon-circle-arrow-right:before {\n  content: \"\\e131\";\n}\n.glyphicon-circle-arrow-left:before {\n  content: \"\\e132\";\n}\n.glyphicon-circle-arrow-up:before {\n  content: \"\\e133\";\n}\n.glyphicon-circle-arrow-down:before {\n  content: \"\\e134\";\n}\n.glyphicon-globe:before {\n  content: \"\\e135\";\n}\n.glyphicon-wrench:before {\n  content: \"\\e136\";\n}\n.glyphicon-tasks:before {\n  content: \"\\e137\";\n}\n.glyphicon-filter:before {\n  content: \"\\e138\";\n}\n.glyphicon-briefcase:before {\n  content: \"\\e139\";\n}\n.glyphicon-fullscreen:before {\n  content: \"\\e140\";\n}\n.glyphicon-dashboard:before {\n  content: \"\\e141\";\n}\n.glyphicon-paperclip:before {\n  content: \"\\e142\";\n}\n.glyphicon-heart-empty:before {\n  content: \"\\e143\";\n}\n.glyphicon-link:before {\n  content: \"\\e144\";\n}\n.glyphicon-phone:before {\n  content: \"\\e145\";\n}\n.glyphicon-pushpin:before {\n  content: \"\\e146\";\n}\n.glyphicon-usd:before {\n  content: \"\\e148\";\n}\n.glyphicon-gbp:before {\n  content: \"\\e149\";\n}\n.glyphicon-sort:before {\n  content: \"\\e150\";\n}\n.glyphicon-sort-by-alphabet:before {\n  content: \"\\e151\";\n}\n.glyphicon-sort-by-alphabet-alt:before {\n  content: \"\\e152\";\n}\n.glyphicon-sort-by-order:before {\n  content: \"\\e153\";\n}\n.glyphicon-sort-by-order-alt:before {\n  content: \"\\e154\";\n}\n.glyphicon-sort-by-attributes:before {\n  content: \"\\e155\";\n}\n.glyphicon-sort-by-attributes-alt:before {\n  content: \"\\e156\";\n}\n.glyphicon-unchecked:before {\n  content: \"\\e157\";\n}\n.glyphicon-expand:before {\n  content: \"\\e158\";\n}\n.glyphicon-collapse-down:before {\n  content: \"\\e159\";\n}\n.glyphicon-collapse-up:before {\n  content: \"\\e160\";\n}\n.glyphicon-log-in:before {\n  content: \"\\e161\";\n}\n.glyphicon-flash:before {\n  content: \"\\e162\";\n}\n.glyphicon-log-out:before {\n  content: \"\\e163\";\n}\n.glyphicon-new-window:before {\n  content: \"\\e164\";\n}\n.glyphicon-record:before {\n  content: \"\\e165\";\n}\n.glyphicon-save:before {\n  content: \"\\e166\";\n}\n.glyphicon-open:before {\n  content: \"\\e167\";\n}\n.glyphicon-saved:before {\n  content: \"\\e168\";\n}\n.glyphicon-import:before {\n  content: \"\\e169\";\n}\n.glyphicon-export:before {\n  content: \"\\e170\";\n}\n.glyphicon-send:before {\n  content: \"\\e171\";\n}\n.glyphicon-floppy-disk:before {\n  content: \"\\e172\";\n}\n.glyphicon-floppy-saved:before {\n  content: \"\\e173\";\n}\n.glyphicon-floppy-remove:before {\n  content: \"\\e174\";\n}\n.glyphicon-floppy-save:before {\n  content: \"\\e175\";\n}\n.glyphicon-floppy-open:before {\n  content: \"\\e176\";\n}\n.glyphicon-credit-card:before {\n  content: \"\\e177\";\n}\n.glyphicon-transfer:before {\n  content: \"\\e178\";\n}\n.glyphicon-cutlery:before {\n  content: \"\\e179\";\n}\n.glyphicon-header:before {\n  content: \"\\e180\";\n}\n.glyphicon-compressed:before {\n  content: \"\\e181\";\n}\n.glyphicon-earphone:before {\n  content: \"\\e182\";\n}\n.glyphicon-phone-alt:before {\n  content: \"\\e183\";\n}\n.glyphicon-tower:before {\n  content: \"\\e184\";\n}\n.glyphicon-stats:before {\n  content: \"\\e185\";\n}\n.glyphicon-sd-video:before {\n  content: \"\\e186\";\n}\n.glyphicon-hd-video:before {\n  content: \"\\e187\";\n}\n.glyphicon-subtitles:before {\n  content: \"\\e188\";\n}\n.glyphicon-sound-stereo:before {\n  content: \"\\e189\";\n}\n.glyphicon-sound-dolby:before {\n  content: \"\\e190\";\n}\n.glyphicon-sound-5-1:before {\n  content: \"\\e191\";\n}\n.glyphicon-sound-6-1:before {\n  content: \"\\e192\";\n}\n.glyphicon-sound-7-1:before {\n  content: \"\\e193\";\n}\n.glyphicon-copyright-mark:before {\n  content: \"\\e194\";\n}\n.glyphicon-registration-mark:before {\n  content: \"\\e195\";\n}\n.glyphicon-cloud-download:before {\n  content: \"\\e197\";\n}\n.glyphicon-cloud-upload:before {\n  content: \"\\e198\";\n}\n.glyphicon-tree-conifer:before {\n  content: \"\\e199\";\n}\n.glyphicon-tree-deciduous:before {\n  content: \"\\e200\";\n}\n.glyphicon-cd:before {\n  content: \"\\e201\";\n}\n.glyphicon-save-file:before {\n  content: \"\\e202\";\n}\n.glyphicon-open-file:before {\n  content: \"\\e203\";\n}\n.glyphicon-level-up:before {\n  content: \"\\e204\";\n}\n.glyphicon-copy:before {\n  content: \"\\e205\";\n}\n.glyphicon-paste:before {\n  content: \"\\e206\";\n}\n.glyphicon-alert:before {\n  content: \"\\e209\";\n}\n.glyphicon-equalizer:before {\n  content: \"\\e210\";\n}\n.glyphicon-king:before {\n  content: \"\\e211\";\n}\n.glyphicon-queen:before {\n  content: \"\\e212\";\n}\n.glyphicon-pawn:before {\n  content: \"\\e213\";\n}\n.glyphicon-bishop:before {\n  content: \"\\e214\";\n}\n.glyphicon-knight:before {\n  content: \"\\e215\";\n}\n.glyphicon-baby-formula:before {\n  content: \"\\e216\";\n}\n.glyphicon-tent:before {\n  content: \"\\26fa\";\n}\n.glyphicon-blackboard:before {\n  content: \"\\e218\";\n}\n.glyphicon-bed:before {\n  content: \"\\e219\";\n}\n.glyphicon-apple:before {\n  content: \"\\f8ff\";\n}\n.glyphicon-erase:before {\n  content: \"\\e221\";\n}\n.glyphicon-hourglass:before {\n  content: \"\\231b\";\n}\n.glyphicon-lamp:before {\n  content: \"\\e223\";\n}\n.glyphicon-duplicate:before {\n  content: \"\\e224\";\n}\n.glyphicon-piggy-bank:before {\n  content: \"\\e225\";\n}\n.glyphicon-scissors:before {\n  content: \"\\e226\";\n}\n.glyphicon-bitcoin:before {\n  content: \"\\e227\";\n}\n.glyphicon-btc:before {\n  content: \"\\e227\";\n}\n.glyphicon-xbt:before {\n  content: \"\\e227\";\n}\n.glyphicon-yen:before {\n  content: \"\\00a5\";\n}\n.glyphicon-jpy:before {\n  content: \"\\00a5\";\n}\n.glyphicon-ruble:before {\n  content: \"\\20bd\";\n}\n.glyphicon-rub:before {\n  content: \"\\20bd\";\n}\n.glyphicon-scale:before {\n  content: \"\\e230\";\n}\n.glyphicon-ice-lolly:before {\n  content: \"\\e231\";\n}\n.glyphicon-ice-lolly-tasted:before {\n  content: \"\\e232\";\n}\n.glyphicon-education:before {\n  content: \"\\e233\";\n}\n.glyphicon-option-horizontal:before {\n  content: \"\\e234\";\n}\n.glyphicon-option-vertical:before {\n  content: \"\\e235\";\n}\n.glyphicon-menu-hamburger:before {\n  content: \"\\e236\";\n}\n.glyphicon-modal-window:before {\n  content: \"\\e237\";\n}\n.glyphicon-oil:before {\n  content: \"\\e238\";\n}\n.glyphicon-grain:before {\n  content: \"\\e239\";\n}\n.glyphicon-sunglasses:before {\n  content: \"\\e240\";\n}\n.glyphicon-text-size:before {\n  content: \"\\e241\";\n}\n.glyphicon-text-color:before {\n  content: \"\\e242\";\n}\n.glyphicon-text-background:before {\n  content: \"\\e243\";\n}\n.glyphicon-object-align-top:before {\n  content: \"\\e244\";\n}\n.glyphicon-object-align-bottom:before {\n  content: \"\\e245\";\n}\n.glyphicon-object-align-horizontal:before {\n  content: \"\\e246\";\n}\n.glyphicon-object-align-left:before {\n  content: \"\\e247\";\n}\n.glyphicon-object-align-vertical:before {\n  content: \"\\e248\";\n}\n.glyphicon-object-align-right:before {\n  content: \"\\e249\";\n}\n.glyphicon-triangle-right:before {\n  content: \"\\e250\";\n}\n.glyphicon-triangle-left:before {\n  content: \"\\e251\";\n}\n.glyphicon-triangle-bottom:before {\n  content: \"\\e252\";\n}\n.glyphicon-triangle-top:before {\n  content: \"\\e253\";\n}\n.glyphicon-console:before {\n  content: \"\\e254\";\n}\n.glyphicon-superscript:before {\n  content: \"\\e255\";\n}\n.glyphicon-subscript:before {\n  content: \"\\e256\";\n}\n.glyphicon-menu-left:before {\n  content: \"\\e257\";\n}\n.glyphicon-menu-right:before {\n  content: \"\\e258\";\n}\n.glyphicon-menu-down:before {\n  content: \"\\e259\";\n}\n.glyphicon-menu-up:before {\n  content: \"\\e260\";\n}", ""]);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
@@ -38829,6 +38851,57 @@ function toComment(sourceMap) {
   var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
   return "/*# ".concat(data, " */");
 }
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (url, needQuotes) {
+  if (typeof url !== 'string') {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, '\\n'), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+
+/***/ "./node_modules/popper.js/dist/popper.min.js":
+/*!***************************************************!*\
+  !*** ./node_modules/popper.js/dist/popper.min.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(global) {/*
+ Copyright (C) Federico Zivolo 2019
+ Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
+ */var e='undefined'!=typeof window&&'undefined'!=typeof document;const t=['Edge','Trident','Firefox'];let o=0;for(let n=0;n<t.length;n+=1)if(e&&0<=navigator.userAgent.indexOf(t[n])){o=1;break}function n(e){let t=!1;return()=>{t||(t=!0,window.Promise.resolve().then(()=>{t=!1,e()}))}}function i(e){let t=!1;return()=>{t||(t=!0,setTimeout(()=>{t=!1,e()},o))}}const r=e&&window.Promise;var p=r?n:i;function d(e){return e&&'[object Function]'==={}.toString.call(e)}function s(e,t){if(1!==e.nodeType)return[];const o=e.ownerDocument.defaultView,n=o.getComputedStyle(e,null);return t?n[t]:n}function f(e){return'HTML'===e.nodeName?e:e.parentNode||e.host}function a(e){if(!e)return document.body;switch(e.nodeName){case'HTML':case'BODY':return e.ownerDocument.body;case'#document':return e.body;}const{overflow:t,overflowX:o,overflowY:n}=s(e);return /(auto|scroll|overlay)/.test(t+n+o)?e:a(f(e))}const l=e&&!!(window.MSInputMethodContext&&document.documentMode),m=e&&/MSIE 10/.test(navigator.userAgent);function h(e){return 11===e?l:10===e?m:l||m}function c(e){if(!e)return document.documentElement;const t=h(10)?document.body:null;let o=e.offsetParent||null;for(;o===t&&e.nextElementSibling;)o=(e=e.nextElementSibling).offsetParent;const n=o&&o.nodeName;return n&&'BODY'!==n&&'HTML'!==n?-1!==['TH','TD','TABLE'].indexOf(o.nodeName)&&'static'===s(o,'position')?c(o):o:e?e.ownerDocument.documentElement:document.documentElement}function u(e){const{nodeName:t}=e;return'BODY'!==t&&('HTML'===t||c(e.firstElementChild)===e)}function g(e){return null===e.parentNode?e:g(e.parentNode)}function b(e,t){if(!e||!e.nodeType||!t||!t.nodeType)return document.documentElement;const o=e.compareDocumentPosition(t)&Node.DOCUMENT_POSITION_FOLLOWING,n=o?e:t,i=o?t:e,r=document.createRange();r.setStart(n,0),r.setEnd(i,0);const{commonAncestorContainer:p}=r;if(e!==p&&t!==p||n.contains(i))return u(p)?p:c(p);const d=g(e);return d.host?b(d.host,t):b(e,g(t).host)}function w(e,t='top'){const o='top'===t?'scrollTop':'scrollLeft',n=e.nodeName;if('BODY'===n||'HTML'===n){const t=e.ownerDocument.documentElement,n=e.ownerDocument.scrollingElement||t;return n[o]}return e[o]}function y(e,t,o=!1){const n=w(t,'top'),i=w(t,'left'),r=o?-1:1;return e.top+=n*r,e.bottom+=n*r,e.left+=i*r,e.right+=i*r,e}function E(e,t){const o='x'===t?'Left':'Top',n='Left'==o?'Right':'Bottom';return parseFloat(e[`border${o}Width`],10)+parseFloat(e[`border${n}Width`],10)}function x(e,t,o,n){return Math.max(t[`offset${e}`],t[`scroll${e}`],o[`client${e}`],o[`offset${e}`],o[`scroll${e}`],h(10)?parseInt(o[`offset${e}`])+parseInt(n[`margin${'Height'===e?'Top':'Left'}`])+parseInt(n[`margin${'Height'===e?'Bottom':'Right'}`]):0)}function v(e){const t=e.body,o=e.documentElement,n=h(10)&&getComputedStyle(o);return{height:x('Height',t,o,n),width:x('Width',t,o,n)}}var O=Object.assign||function(e){for(var t,o=1;o<arguments.length;o++)for(var n in t=arguments[o],t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e};function L(e){return O({},e,{right:e.left+e.width,bottom:e.top+e.height})}function S(e){let t={};try{if(h(10)){t=e.getBoundingClientRect();const o=w(e,'top'),n=w(e,'left');t.top+=o,t.left+=n,t.bottom+=o,t.right+=n}else t=e.getBoundingClientRect()}catch(t){}const o={left:t.left,top:t.top,width:t.right-t.left,height:t.bottom-t.top},n='HTML'===e.nodeName?v(e.ownerDocument):{},i=n.width||e.clientWidth||o.right-o.left,r=n.height||e.clientHeight||o.bottom-o.top;let p=e.offsetWidth-i,d=e.offsetHeight-r;if(p||d){const t=s(e);p-=E(t,'x'),d-=E(t,'y'),o.width-=p,o.height-=d}return L(o)}function T(e,t,o=!1){var n=Math.max;const i=h(10),r='HTML'===t.nodeName,p=S(e),d=S(t),f=a(e),l=s(t),m=parseFloat(l.borderTopWidth,10),c=parseFloat(l.borderLeftWidth,10);o&&r&&(d.top=n(d.top,0),d.left=n(d.left,0));let u=L({top:p.top-d.top-m,left:p.left-d.left-c,width:p.width,height:p.height});if(u.marginTop=0,u.marginLeft=0,!i&&r){const e=parseFloat(l.marginTop,10),t=parseFloat(l.marginLeft,10);u.top-=m-e,u.bottom-=m-e,u.left-=c-t,u.right-=c-t,u.marginTop=e,u.marginLeft=t}return(i&&!o?t.contains(f):t===f&&'BODY'!==f.nodeName)&&(u=y(u,t)),u}function D(e,t=!1){var o=Math.max;const n=e.ownerDocument.documentElement,i=T(e,n),r=o(n.clientWidth,window.innerWidth||0),p=o(n.clientHeight,window.innerHeight||0),d=t?0:w(n),s=t?0:w(n,'left'),f={top:d-i.top+i.marginTop,left:s-i.left+i.marginLeft,width:r,height:p};return L(f)}function C(e){const t=e.nodeName;if('BODY'===t||'HTML'===t)return!1;if('fixed'===s(e,'position'))return!0;const o=f(e);return!!o&&C(o)}function N(e){if(!e||!e.parentElement||h())return document.documentElement;let t=e.parentElement;for(;t&&'none'===s(t,'transform');)t=t.parentElement;return t||document.documentElement}function P(e,t,o,n,i=!1){let r={top:0,left:0};const p=i?N(e):b(e,t);if('viewport'===n)r=D(p,i);else{let o;'scrollParent'===n?(o=a(f(t)),'BODY'===o.nodeName&&(o=e.ownerDocument.documentElement)):'window'===n?o=e.ownerDocument.documentElement:o=n;const d=T(o,p,i);if('HTML'===o.nodeName&&!C(p)){const{height:t,width:o}=v(e.ownerDocument);r.top+=d.top-d.marginTop,r.bottom=t+d.top,r.left+=d.left-d.marginLeft,r.right=o+d.left}else r=d}o=o||0;const d='number'==typeof o;return r.left+=d?o:o.left||0,r.top+=d?o:o.top||0,r.right-=d?o:o.right||0,r.bottom-=d?o:o.bottom||0,r}function B({width:e,height:t}){return e*t}function H(e,t,o,n,i,r=0){if(-1===e.indexOf('auto'))return e;const p=P(o,n,r,i),d={top:{width:p.width,height:t.top-p.top},right:{width:p.right-t.right,height:p.height},bottom:{width:p.width,height:p.bottom-t.bottom},left:{width:t.left-p.left,height:p.height}},s=Object.keys(d).map((e)=>O({key:e},d[e],{area:B(d[e])})).sort((e,t)=>t.area-e.area),f=s.filter(({width:e,height:t})=>e>=o.clientWidth&&t>=o.clientHeight),a=0<f.length?f[0].key:s[0].key,l=e.split('-')[1];return a+(l?`-${l}`:'')}function W(e,t,o,n=null){const i=n?N(t):b(t,o);return T(o,i,n)}function k(e){const t=e.ownerDocument.defaultView,o=t.getComputedStyle(e),n=parseFloat(o.marginTop||0)+parseFloat(o.marginBottom||0),i=parseFloat(o.marginLeft||0)+parseFloat(o.marginRight||0),r={width:e.offsetWidth+i,height:e.offsetHeight+n};return r}function A(e){const t={left:'right',right:'left',bottom:'top',top:'bottom'};return e.replace(/left|right|bottom|top/g,(e)=>t[e])}function M(e,t,o){o=o.split('-')[0];const n=k(e),i={width:n.width,height:n.height},r=-1!==['right','left'].indexOf(o),p=r?'top':'left',d=r?'left':'top',s=r?'height':'width',f=r?'width':'height';return i[p]=t[p]+t[s]/2-n[s]/2,i[d]=o===d?t[d]-n[f]:t[A(d)],i}function F(e,t){return Array.prototype.find?e.find(t):e.filter(t)[0]}function I(e,t,o){if(Array.prototype.findIndex)return e.findIndex((e)=>e[t]===o);const n=F(e,(e)=>e[t]===o);return e.indexOf(n)}function R(e,t,o){const n=void 0===o?e:e.slice(0,I(e,'name',o));return n.forEach((e)=>{e['function']&&console.warn('`modifier.function` is deprecated, use `modifier.fn`!');const o=e['function']||e.fn;e.enabled&&d(o)&&(t.offsets.popper=L(t.offsets.popper),t.offsets.reference=L(t.offsets.reference),t=o(t,e))}),t}function U(){if(this.state.isDestroyed)return;let e={instance:this,styles:{},arrowStyles:{},attributes:{},flipped:!1,offsets:{}};e.offsets.reference=W(this.state,this.popper,this.reference,this.options.positionFixed),e.placement=H(this.options.placement,e.offsets.reference,this.popper,this.reference,this.options.modifiers.flip.boundariesElement,this.options.modifiers.flip.padding),e.originalPlacement=e.placement,e.positionFixed=this.options.positionFixed,e.offsets.popper=M(this.popper,e.offsets.reference,e.placement),e.offsets.popper.position=this.options.positionFixed?'fixed':'absolute',e=R(this.modifiers,e),this.state.isCreated?this.options.onUpdate(e):(this.state.isCreated=!0,this.options.onCreate(e))}function Y(e,t){return e.some(({name:e,enabled:o})=>o&&e===t)}function V(e){const t=[!1,'ms','Webkit','Moz','O'],o=e.charAt(0).toUpperCase()+e.slice(1);for(let n=0;n<t.length;n++){const i=t[n],r=i?`${i}${o}`:e;if('undefined'!=typeof document.body.style[r])return r}return null}function j(){return this.state.isDestroyed=!0,Y(this.modifiers,'applyStyle')&&(this.popper.removeAttribute('x-placement'),this.popper.style.position='',this.popper.style.top='',this.popper.style.left='',this.popper.style.right='',this.popper.style.bottom='',this.popper.style.willChange='',this.popper.style[V('transform')]=''),this.disableEventListeners(),this.options.removeOnDestroy&&this.popper.parentNode.removeChild(this.popper),this}function K(e){const t=e.ownerDocument;return t?t.defaultView:window}function q(e,t,o,n){const i='BODY'===e.nodeName,r=i?e.ownerDocument.defaultView:e;r.addEventListener(t,o,{passive:!0}),i||q(a(r.parentNode),t,o,n),n.push(r)}function z(e,t,o,n){o.updateBound=n,K(e).addEventListener('resize',o.updateBound,{passive:!0});const i=a(e);return q(i,'scroll',o.updateBound,o.scrollParents),o.scrollElement=i,o.eventsEnabled=!0,o}function G(){this.state.eventsEnabled||(this.state=z(this.reference,this.options,this.state,this.scheduleUpdate))}function _(e,t){return K(e).removeEventListener('resize',t.updateBound),t.scrollParents.forEach((e)=>{e.removeEventListener('scroll',t.updateBound)}),t.updateBound=null,t.scrollParents=[],t.scrollElement=null,t.eventsEnabled=!1,t}function X(){this.state.eventsEnabled&&(cancelAnimationFrame(this.scheduleUpdate),this.state=_(this.reference,this.state))}function J(e){return''!==e&&!isNaN(parseFloat(e))&&isFinite(e)}function Q(e,t){Object.keys(t).forEach((o)=>{let n='';-1!==['width','height','top','right','bottom','left'].indexOf(o)&&J(t[o])&&(n='px'),e.style[o]=t[o]+n})}function Z(e,t){Object.keys(t).forEach(function(o){const n=t[o];!1===n?e.removeAttribute(o):e.setAttribute(o,t[o])})}function $(e){return Q(e.instance.popper,e.styles),Z(e.instance.popper,e.attributes),e.arrowElement&&Object.keys(e.arrowStyles).length&&Q(e.arrowElement,e.arrowStyles),e}function ee(e,t,o,n,i){const r=W(i,t,e,o.positionFixed),p=H(o.placement,r,t,e,o.modifiers.flip.boundariesElement,o.modifiers.flip.padding);return t.setAttribute('x-placement',p),Q(t,{position:o.positionFixed?'fixed':'absolute'}),o}function te(e,t){const{popper:o,reference:n}=e.offsets,{round:i,floor:r}=Math,p=(e)=>e,d=i(n.width),s=i(o.width),f=-1!==['left','right'].indexOf(e.placement),a=-1!==e.placement.indexOf('-'),l=t?f||a||d%2==s%2?i:r:p,m=t?i:p;return{left:l(1==d%2&&1==s%2&&!a&&t?o.left-1:o.left),top:m(o.top),bottom:m(o.bottom),right:l(o.right)}}const oe=e&&/Firefox/i.test(navigator.userAgent);function ne(e,t){const{x:o,y:n}=t,{popper:i}=e.offsets,r=F(e.instance.modifiers,(e)=>'applyStyle'===e.name).gpuAcceleration;void 0!==r&&console.warn('WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!');const p=void 0===r?t.gpuAcceleration:r,d=c(e.instance.popper),s=S(d),f={position:i.position},a=te(e,2>window.devicePixelRatio||!oe),l='bottom'===o?'top':'bottom',m='right'===n?'left':'right',h=V('transform');let u,g;if(g='bottom'==l?'HTML'===d.nodeName?-d.clientHeight+a.bottom:-s.height+a.bottom:a.top,u='right'==m?'HTML'===d.nodeName?-d.clientWidth+a.right:-s.width+a.right:a.left,p&&h)f[h]=`translate3d(${u}px, ${g}px, 0)`,f[l]=0,f[m]=0,f.willChange='transform';else{const e='bottom'==l?-1:1,t='right'==m?-1:1;f[l]=g*e,f[m]=u*t,f.willChange=`${l}, ${m}`}const b={"x-placement":e.placement};return e.attributes=O({},b,e.attributes),e.styles=O({},f,e.styles),e.arrowStyles=O({},e.offsets.arrow,e.arrowStyles),e}function ie(e,t,o){const n=F(e,({name:e})=>e===t),i=!!n&&e.some((e)=>e.name===o&&e.enabled&&e.order<n.order);if(!i){const e=`\`${t}\``,n=`\`${o}\``;console.warn(`${n} modifier is required by ${e} modifier in order to work, be sure to include it before ${e}!`)}return i}function re(e,t){if(!ie(e.instance.modifiers,'arrow','keepTogether'))return e;let o=t.element;if('string'==typeof o){if(o=e.instance.popper.querySelector(o),!o)return e;}else if(!e.instance.popper.contains(o))return console.warn('WARNING: `arrow.element` must be child of its popper element!'),e;const n=e.placement.split('-')[0],{popper:i,reference:r}=e.offsets,p=-1!==['left','right'].indexOf(n),d=p?'height':'width',f=p?'Top':'Left',a=f.toLowerCase(),l=p?'left':'top',m=p?'bottom':'right',h=k(o)[d];r[m]-h<i[a]&&(e.offsets.popper[a]-=i[a]-(r[m]-h)),r[a]+h>i[m]&&(e.offsets.popper[a]+=r[a]+h-i[m]),e.offsets.popper=L(e.offsets.popper);const c=r[a]+r[d]/2-h/2,u=s(e.instance.popper),g=parseFloat(u[`margin${f}`],10),b=parseFloat(u[`border${f}Width`],10);let w=c-e.offsets.popper[a]-g-b;return w=Math.max(Math.min(i[d]-h,w),0),e.arrowElement=o,e.offsets.arrow={[a]:Math.round(w),[l]:''},e}function pe(e){if('end'===e)return'start';return'start'===e?'end':e}var de=['auto-start','auto','auto-end','top-start','top','top-end','right-start','right','right-end','bottom-end','bottom','bottom-start','left-end','left','left-start'];const se=de.slice(3);function fe(e,t=!1){const o=se.indexOf(e),n=se.slice(o+1).concat(se.slice(0,o));return t?n.reverse():n}const ae={FLIP:'flip',CLOCKWISE:'clockwise',COUNTERCLOCKWISE:'counterclockwise'};function le(e,t){if(Y(e.instance.modifiers,'inner'))return e;if(e.flipped&&e.placement===e.originalPlacement)return e;const o=P(e.instance.popper,e.instance.reference,t.padding,t.boundariesElement,e.positionFixed);let n=e.placement.split('-')[0],i=A(n),r=e.placement.split('-')[1]||'',p=[];switch(t.behavior){case ae.FLIP:p=[n,i];break;case ae.CLOCKWISE:p=fe(n);break;case ae.COUNTERCLOCKWISE:p=fe(n,!0);break;default:p=t.behavior;}return p.forEach((d,s)=>{if(n!==d||p.length===s+1)return e;n=e.placement.split('-')[0],i=A(n);const f=e.offsets.popper,a=e.offsets.reference,l=Math.floor,m='left'===n&&l(f.right)>l(a.left)||'right'===n&&l(f.left)<l(a.right)||'top'===n&&l(f.bottom)>l(a.top)||'bottom'===n&&l(f.top)<l(a.bottom),h=l(f.left)<l(o.left),c=l(f.right)>l(o.right),u=l(f.top)<l(o.top),g=l(f.bottom)>l(o.bottom),b='left'===n&&h||'right'===n&&c||'top'===n&&u||'bottom'===n&&g,w=-1!==['top','bottom'].indexOf(n),y=!!t.flipVariations&&(w&&'start'===r&&h||w&&'end'===r&&c||!w&&'start'===r&&u||!w&&'end'===r&&g),E=!!t.flipVariationsByContent&&(w&&'start'===r&&c||w&&'end'===r&&h||!w&&'start'===r&&g||!w&&'end'===r&&u),x=y||E;(m||b||x)&&(e.flipped=!0,(m||b)&&(n=p[s+1]),x&&(r=pe(r)),e.placement=n+(r?'-'+r:''),e.offsets.popper=O({},e.offsets.popper,M(e.instance.popper,e.offsets.reference,e.placement)),e=R(e.instance.modifiers,e,'flip'))}),e}function me(e){const{popper:t,reference:o}=e.offsets,n=e.placement.split('-')[0],i=Math.floor,r=-1!==['top','bottom'].indexOf(n),p=r?'right':'bottom',d=r?'left':'top',s=r?'width':'height';return t[p]<i(o[d])&&(e.offsets.popper[d]=i(o[d])-t[s]),t[d]>i(o[p])&&(e.offsets.popper[d]=i(o[p])),e}function he(e,t,o,n){var i=Math.max;const r=e.match(/((?:\-|\+)?\d*\.?\d*)(.*)/),p=+r[1],d=r[2];if(!p)return e;if(0===d.indexOf('%')){let e;switch(d){case'%p':e=o;break;case'%':case'%r':default:e=n;}const i=L(e);return i[t]/100*p}if('vh'===d||'vw'===d){let e;return e='vh'===d?i(document.documentElement.clientHeight,window.innerHeight||0):i(document.documentElement.clientWidth,window.innerWidth||0),e/100*p}return p}function ce(e,t,o,n){const i=[0,0],r=-1!==['right','left'].indexOf(n),p=e.split(/(\+|\-)/).map((e)=>e.trim()),d=p.indexOf(F(p,(e)=>-1!==e.search(/,|\s/)));p[d]&&-1===p[d].indexOf(',')&&console.warn('Offsets separated by white space(s) are deprecated, use a comma (,) instead.');const s=/\s*,\s*|\s+/;let f=-1===d?[p]:[p.slice(0,d).concat([p[d].split(s)[0]]),[p[d].split(s)[1]].concat(p.slice(d+1))];return f=f.map((e,n)=>{const i=(1===n?!r:r)?'height':'width';let p=!1;return e.reduce((e,t)=>''===e[e.length-1]&&-1!==['+','-'].indexOf(t)?(e[e.length-1]=t,p=!0,e):p?(e[e.length-1]+=t,p=!1,e):e.concat(t),[]).map((e)=>he(e,i,t,o))}),f.forEach((e,t)=>{e.forEach((o,n)=>{J(o)&&(i[t]+=o*('-'===e[n-1]?-1:1))})}),i}function ue(e,{offset:t}){const{placement:o,offsets:{popper:n,reference:i}}=e,r=o.split('-')[0];let p;return p=J(+t)?[+t,0]:ce(t,n,i,r),'left'===r?(n.top+=p[0],n.left-=p[1]):'right'===r?(n.top+=p[0],n.left+=p[1]):'top'===r?(n.left+=p[0],n.top-=p[1]):'bottom'===r&&(n.left+=p[0],n.top+=p[1]),e.popper=n,e}function ge(e,t){let o=t.boundariesElement||c(e.instance.popper);e.instance.reference===o&&(o=c(o));const n=V('transform'),i=e.instance.popper.style,{top:r,left:p,[n]:d}=i;i.top='',i.left='',i[n]='';const s=P(e.instance.popper,e.instance.reference,t.padding,o,e.positionFixed);i.top=r,i.left=p,i[n]=d,t.boundaries=s;const f=t.priority;let a=e.offsets.popper;const l={primary(e){let o=a[e];return a[e]<s[e]&&!t.escapeWithReference&&(o=Math.max(a[e],s[e])),{[e]:o}},secondary(e){const o='right'===e?'left':'top';let n=a[o];return a[e]>s[e]&&!t.escapeWithReference&&(n=Math.min(a[o],s[e]-('right'===e?a.width:a.height))),{[o]:n}}};return f.forEach((e)=>{const t=-1===['left','top'].indexOf(e)?'secondary':'primary';a=O({},a,l[t](e))}),e.offsets.popper=a,e}function be(e){const t=e.placement,o=t.split('-')[0],n=t.split('-')[1];if(n){const{reference:t,popper:i}=e.offsets,r=-1!==['bottom','top'].indexOf(o),p=r?'left':'top',d=r?'width':'height',s={start:{[p]:t[p]},end:{[p]:t[p]+t[d]-i[d]}};e.offsets.popper=O({},i,s[n])}return e}function we(e){if(!ie(e.instance.modifiers,'hide','preventOverflow'))return e;const t=e.offsets.reference,o=F(e.instance.modifiers,(e)=>'preventOverflow'===e.name).boundaries;if(t.bottom<o.top||t.left>o.right||t.top>o.bottom||t.right<o.left){if(!0===e.hide)return e;e.hide=!0,e.attributes['x-out-of-boundaries']=''}else{if(!1===e.hide)return e;e.hide=!1,e.attributes['x-out-of-boundaries']=!1}return e}function ye(e){const t=e.placement,o=t.split('-')[0],{popper:n,reference:i}=e.offsets,r=-1!==['left','right'].indexOf(o),p=-1===['top','left'].indexOf(o);return n[r?'left':'top']=i[o]-(p?n[r?'width':'height']:0),e.placement=A(t),e.offsets.popper=L(n),e}var Ee={shift:{order:100,enabled:!0,fn:be},offset:{order:200,enabled:!0,fn:ue,offset:0},preventOverflow:{order:300,enabled:!0,fn:ge,priority:['left','right','top','bottom'],padding:5,boundariesElement:'scrollParent'},keepTogether:{order:400,enabled:!0,fn:me},arrow:{order:500,enabled:!0,fn:re,element:'[x-arrow]'},flip:{order:600,enabled:!0,fn:le,behavior:'flip',padding:5,boundariesElement:'viewport',flipVariations:!1,flipVariationsByContent:!1},inner:{order:700,enabled:!1,fn:ye},hide:{order:800,enabled:!0,fn:we},computeStyle:{order:850,enabled:!0,fn:ne,gpuAcceleration:!0,x:'bottom',y:'right'},applyStyle:{order:900,enabled:!0,fn:$,onLoad:ee,gpuAcceleration:void 0}},xe={placement:'bottom',positionFixed:!1,eventsEnabled:!0,removeOnDestroy:!1,onCreate:()=>{},onUpdate:()=>{},modifiers:Ee};class ve{constructor(e,t,o={}){this.scheduleUpdate=()=>requestAnimationFrame(this.update),this.update=p(this.update.bind(this)),this.options=O({},ve.Defaults,o),this.state={isDestroyed:!1,isCreated:!1,scrollParents:[]},this.reference=e&&e.jquery?e[0]:e,this.popper=t&&t.jquery?t[0]:t,this.options.modifiers={},Object.keys(O({},ve.Defaults.modifiers,o.modifiers)).forEach((e)=>{this.options.modifiers[e]=O({},ve.Defaults.modifiers[e]||{},o.modifiers?o.modifiers[e]:{})}),this.modifiers=Object.keys(this.options.modifiers).map((e)=>O({name:e},this.options.modifiers[e])).sort((e,t)=>e.order-t.order),this.modifiers.forEach((e)=>{e.enabled&&d(e.onLoad)&&e.onLoad(this.reference,this.popper,this.options,e,this.state)}),this.update();const n=this.options.eventsEnabled;n&&this.enableEventListeners(),this.state.eventsEnabled=n}update(){return U.call(this)}destroy(){return j.call(this)}enableEventListeners(){return G.call(this)}disableEventListeners(){return X.call(this)}}ve.Utils=('undefined'==typeof window?global:window).PopperUtils,ve.placements=de,ve.Defaults=xe;/* harmony default export */ __webpack_exports__["default"] = (ve);
+//# sourceMappingURL=popper.min.js.map
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -39341,6 +39414,133 @@ module.exports = function (css) {
 
 /***/ }),
 
+/***/ "./node_modules/webpack-icons-installer/bootstrap.js":
+/*!**********************************************!*\
+  !*** (webpack)-icons-installer/bootstrap.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./bootstrap/bootstrap.css */ "./node_modules/webpack-icons-installer/bootstrap/bootstrap.css");
+
+/***/ }),
+
+/***/ "./node_modules/webpack-icons-installer/bootstrap/bootstrap.css":
+/*!*********************************************************!*\
+  !*** (webpack)-icons-installer/bootstrap/bootstrap.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../css-loader/dist/cjs.js!./bootstrap.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/webpack-icons-installer/bootstrap/bootstrap.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.eot":
+/*!****************************************************************************!*\
+  !*** (webpack)-icons-installer/bootstrap/glyphicons-halflings-regular.eot ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/glyphicons-halflings-regular.eot";
+
+/***/ }),
+
+/***/ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.svg":
+/*!****************************************************************************!*\
+  !*** (webpack)-icons-installer/bootstrap/glyphicons-halflings-regular.svg ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/glyphicons-halflings-regular.svg";
+
+/***/ }),
+
+/***/ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.ttf":
+/*!****************************************************************************!*\
+  !*** (webpack)-icons-installer/bootstrap/glyphicons-halflings-regular.ttf ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/glyphicons-halflings-regular.ttf";
+
+/***/ }),
+
+/***/ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.woff":
+/*!*****************************************************************************!*\
+  !*** (webpack)-icons-installer/bootstrap/glyphicons-halflings-regular.woff ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/glyphicons-halflings-regular.woff";
+
+/***/ }),
+
+/***/ "./node_modules/webpack-icons-installer/bootstrap/glyphicons-halflings-regular.woff2":
+/*!******************************************************************************!*\
+  !*** (webpack)-icons-installer/bootstrap/glyphicons-halflings-regular.woff2 ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/glyphicons-halflings-regular.woff2";
+
+/***/ }),
+
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
 /***/ "./src/app/add-product/add-product.component.js":
 /*!******************************************************!*\
   !*** ./src/app/add-product/add-product.component.js ***!
@@ -39367,6 +39567,8 @@ function () {
     _classCallCheck(this, AddProductController);
 
     this.http = $http;
+    this.regex = "\\d+";
+    this.response = "";
   }
 
   _createClass(AddProductController, [{
@@ -39431,7 +39633,7 @@ var module = angular__WEBPACK_IMPORTED_MODULE_0___default.a.module("addProduct",
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"$ctrl.addProductForm\" ng-submit=\"$ctrl.submit_add($ctrl.addProductForm)\">\r\n    <div class=\"form-group col-md-2 m-4 p-4 border border-primary\" style=\"border-radius: 10%\">\r\n        <label for=\"Name\">Product Name:</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"Name\" ng-model=\"$ctrl.name\" ng-minlength=\"3\" ng-required=\"true\"></input>\r\n        <div ng-messages=\"$ctrl.addProductForm.Name.$error\">\r\n            <span ng-message=\"required\">Hata! yazı gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n        </div>\r\n        \r\n                    \r\n        <label for=\"Detail\" class=\"mt-1\">Detail:</label>\r\n        <input type=\"text\"  class=\"form-control mt-1\" name=\"Detail\" ng-model=\"$ctrl.detail\" ng-minlength=\"10\" ng-required=\"true\"></input>\r\n        <div ng-messages=\"$ctrl.addProductForm.Detail.$error\">\r\n            <span ng-message=\"required\">Hata! yazı gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n        </div>\r\n\r\n\r\n        <label for=\"Number\" class=\"mt-1\">Number of products:</label>\r\n        <input type=\"text\"  class=\"form-control mt-1\" name=\"Number\" ng-model=\"$ctrl.number\" ng-required=\"true\"></input>\r\n        \r\n        <div ng-messages=\"$ctrl.addProductForm.Number.$error\">\r\n            <span ng-message=\"required\">Hata! int gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n        </div>\r\n\r\n\r\n        <button type=\"submit\" class=\"btn btn-primary mt-3\" ng-disabled=\"$ctrl.addProductForm.$invalid\">Add product</button>\r\n\r\n        <div>{{$ctrl.response}}</div>\r\n    </div>\r\n</form>\r\n\r\n";
+module.exports = "<form name=\"$ctrl.addProductForm\" ng-submit=\"$ctrl.submit_add($ctrl.addProductForm)\">\r\n    <div class=\"form-group col-md-2 m-4 p-4 border border-primary\" style=\"border-radius: 10%\">\r\n\r\n        <label for=\"Name\">Product Name:</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"Name\" ng-model=\"$ctrl.name\" ng-minlength=\"3\" ng-maxlength=\"12\" ng-required=\"true\"></input>\r\n        <div ng-messages=\"$ctrl.addProductForm.Name.$error\">\r\n            <span ng-message=\"required\">Hata! yazı gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n        </div>\r\n        \r\n                    \r\n        <label for=\"Detail\" class=\"mt-1\">Detail:</label>\r\n        <input type=\"text\"  class=\"form-control mt-1\" name=\"Detail\" ng-model=\"$ctrl.detail\" ng-minlength=\"10\" ng-maxlength=\"40\" ng-required=\"true\"></input>\r\n        <div ng-messages=\"$ctrl.addProductForm.Detail.$error\">\r\n            <span ng-message=\"required\">Hata! yazı gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n        </div>\r\n\r\n\r\n        <label for=\"Number\" class=\"mt-1\">Number of products:</label>\r\n        <input type=\"text\"  class=\"form-control mt-1\" name=\"Number\" ng-pattern=\"$ctrl.regex\" ng-maxlength=\"10\" ng-model=\"$ctrl.number\" ng-required=\"true\"></input>\r\n        \r\n        <div ng-messages=\"$ctrl.addProductForm.Number.$error\">\r\n            <span ng-message=\"required\">Hata! int gir</span>\r\n            <span ng-message=\"pattern\">Sayı giriniz!</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla basamak</span>\r\n\r\n        </div>\r\n\r\n\r\n        <button type=\"submit\" class=\"btn btn-primary mt-3\" ng-disabled=\"$ctrl.addProductForm.$invalid\">Add product</button>\r\n\r\n        <div>{{$ctrl.response}}</div>\r\n    </div>\r\n</form>\r\n\r\n";
 
 /***/ }),
 
@@ -39452,10 +39654,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_product_add_product_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./add-product/add-product.module */ "./src/app/add-product/add-product.module.js");
 /* harmony import */ var _update_product_update_product_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./update-product/update-product.module */ "./src/app/update-product/update-product.module.js");
 /* harmony import */ var _delete_product_delete_product_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./delete-product/delete-product.module */ "./src/app/delete-product/delete-product.module.js");
-/* harmony import */ var angular_messages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! angular-messages */ "./node_modules/angular-messages/index.js");
-/* harmony import */ var angular_messages__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(angular_messages__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _product_detail_product_detail_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./product-detail/product-detail.module */ "./src/app/product-detail/product-detail.module.js");
+/* harmony import */ var angular_messages__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! angular-messages */ "./node_modules/angular-messages/index.js");
+/* harmony import */ var angular_messages__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(angular_messages__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _node_modules_popper_js_dist_popper_min_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../node_modules/popper.js/dist/popper.min.js */ "./node_modules/popper.js/dist/popper.min.js");
+/* harmony import */ var webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! webpack-icons-installer/bootstrap */ "./node_modules/webpack-icons-installer/bootstrap.js");
+/* harmony import */ var webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_10__);
 
 
 
@@ -39464,7 +39670,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productApp', [_product_list_product_list_module__WEBPACK_IMPORTED_MODULE_2__["default"], _add_product_add_product_module__WEBPACK_IMPORTED_MODULE_3__["default"], _update_product_update_product_module__WEBPACK_IMPORTED_MODULE_4__["default"], _delete_product_delete_product_module__WEBPACK_IMPORTED_MODULE_5__["default"], angular_route__WEBPACK_IMPORTED_MODULE_1___default.a, angular_messages__WEBPACK_IMPORTED_MODULE_6___default.a]).config(['$routeProvider', function config($routeProvider) {
+
+
+ //load only bootstrap glyphicons
+
+angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productApp', [_product_list_product_list_module__WEBPACK_IMPORTED_MODULE_2__["default"], _add_product_add_product_module__WEBPACK_IMPORTED_MODULE_3__["default"], _update_product_update_product_module__WEBPACK_IMPORTED_MODULE_4__["default"], _delete_product_delete_product_module__WEBPACK_IMPORTED_MODULE_5__["default"], _product_detail_product_detail_module__WEBPACK_IMPORTED_MODULE_6__["default"], angular_route__WEBPACK_IMPORTED_MODULE_1___default.a, angular_messages__WEBPACK_IMPORTED_MODULE_7___default.a]).config(['$routeProvider', function config($routeProvider) {
   $routeProvider.when('/', {
     template: '<product-list></product-list>'
   }).when('/add', {
@@ -39473,6 +39683,8 @@ angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productApp', [_product_li
     template: '<update-product></update-product>'
   }).when('/delete/:id', {
     template: "<delete-product></delete-product>"
+  }).when('/detail/:id', {
+    template: "<product-detail></product-detail>"
   }).otherwise({
     redirectTo: "/"
   });
@@ -39545,7 +39757,13 @@ function () {
     value: function _delete() {
       // will be implemented
       var root = "http://localhost:63038/api/Deneme/" + this.id;
-      this.http["delete"](root);
+      var self = this;
+      this.http["delete"](root).then(function (response) {
+        //Success
+        self.response = "Item deleted successfully!";
+      }, function (response) {
+        self.response = "There has been an error deleting item. Error code: " + response.status;
+      });
     }
   }]);
 
@@ -39586,7 +39804,73 @@ var module = angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('deleteProduc
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"list-group list-group-horizontal\">\r\n    <li class=\"list-group-item\">{{\"ID: \"+$ctrl.product.ID}}</li>\r\n    <li class=\"list-group-item\">{{\"Name: \"+$ctrl.product.Name}}</li>\r\n    <li class=\"list-group-item\">{{\"Detail: \"+$ctrl.product.Detail}}</li>\r\n    <li class=\"list-group-item\">{{\"Number in stock: \"+$ctrl.product.NumberStock}}</li>\r\n</ul>\r\n\r\n<button type=\"submit\" class=\"btn btn-danger mt-2\" ng-click=\"$ctrl.delete()\">Are you sure about deleting this item?</button>\r\n\r\n";
+module.exports = "<ul class=\"list-group list-group-horizontal\">\r\n    <li class=\"list-group-item\">{{\"ID: \"+$ctrl.product.ID}}</li>\r\n    <li class=\"list-group-item\">{{\"Name: \"+$ctrl.product.Name}}</li>\r\n    <li class=\"list-group-item\">{{\"Detail: \"+$ctrl.product.Detail}}</li>\r\n    <li class=\"list-group-item\">{{\"Number in stock: \"+$ctrl.product.NumberStock}}</li>\r\n</ul>\r\n\r\n<button type=\"submit\" class=\"btn btn-danger mt-2\" ng-click=\"$ctrl.delete()\">Are you sure about deleting this item?</button>\r\n<span>{{$ctrl.response}}</span>\r\n\r\n";
+
+/***/ }),
+
+/***/ "./src/app/product-detail/product-detail.component.js":
+/*!************************************************************!*\
+  !*** ./src/app/product-detail/product-detail.component.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _product_detail_template_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./product-detail.template.html */ "./src/app/product-detail/product-detail.template.html");
+/* harmony import */ var _product_detail_template_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_product_detail_template_html__WEBPACK_IMPORTED_MODULE_0__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var ProductDetailController = function ProductDetailController($http, $routeParams) {
+  _classCallCheck(this, ProductDetailController);
+
+  this.detail = "";
+  var root = "http://localhost:63038/api/Deneme/";
+  var self = this;
+  $http.get(root + $routeParams.id).then(function (response) {
+    self.detail = response.data.Detail;
+  }, function (response) {
+    self.detail = "Could not fetch detail. Error Code: " + response.status;
+  });
+};
+
+ProductDetailController.inject = ['$http', '$routeParams'];
+/* harmony default export */ __webpack_exports__["default"] = ({
+  controller: ProductDetailController,
+  template: _product_detail_template_html__WEBPACK_IMPORTED_MODULE_0___default.a
+});
+
+/***/ }),
+
+/***/ "./src/app/product-detail/product-detail.module.js":
+/*!*********************************************************!*\
+  !*** ./src/app/product-detail/product-detail.module.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! angular */ "./node_modules/angular/index.js");
+/* harmony import */ var angular__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(angular__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _product_detail_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./product-detail.component */ "./src/app/product-detail/product-detail.component.js");
+
+
+var module = angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productDetail', []).component("productDetail", _product_detail_component__WEBPACK_IMPORTED_MODULE_1__["default"]);
+/* harmony default export */ __webpack_exports__["default"] = (module.name);
+
+/***/ }),
+
+/***/ "./src/app/product-detail/product-detail.template.html":
+/*!*************************************************************!*\
+  !*** ./src/app/product-detail/product-detail.template.html ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>{{$ctrl.detail}}</p>\r\n\r\n<button type=\"button\" class=\"btn btn-static\"><span class=\"glyphicon glyphicon-exclamation-sign\"></span></button>";
 
 /***/ }),
 
@@ -39616,12 +39900,16 @@ function () {
     _classCallCheck(this, ProductListContoller);
 
     this.products = [];
+    this.isLoaded = true;
     var root = "http://localhost:63038/api/Deneme";
     var self = this;
     $http.get(root).then(function (response) {
       //Success
+      self.isLoaded = false;
       self.products = response.data;
-    }, function (error) {});
+    }, function (error) {
+      self.isLoaded = false;
+    });
   }
 
   _createClass(ProductListContoller, [{
@@ -39666,7 +39954,7 @@ var module = angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productList'
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!-- Input field for filtering products and 'add button'-->\r\n\r\n<div class=\"input-group my-3\">\r\n    <div class=\"input-group-prepend\">\r\n        <span class=\"input-group-text\">Filter Products:</span>\r\n    </div>\r\n    \r\n    <div class=\"col-xs-2\">\r\n        <input ng-model=\"$ctrl.query\" type=\"text\" class=\"form-control\" placeholder=\"...\" aria-label=\"Filter\" aria-describedby=\"basic-addon1\">\r\n    </div>\r\n    \r\n    <div class=\"ml-2\">\r\n        <a href=\"#!/add\"><button type=\"button\" class=\"btn btn-primary\">Add product</button></a>\r\n    </div>\r\n     \r\n</div>\r\n\r\n<!-- Table of products -->\r\n<table class=\"table table-striped\">\r\n    <thead class= \"thead-dark\">\r\n        <tr>\r\n        <th>ID </th>\r\n        <th>Name</th>\r\n        <th>Number in stock</th>\r\n        <th></th>\r\n        \r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n    <tr ng-repeat=\"product in $ctrl.products | filter:$ctrl.query\">\r\n        <td>{{product.ID}}</td>\r\n        <td>{{product.Name}}</td>\r\n        <td>{{product.NumberStock}}</td>\r\n        <td>\r\n            <span><a href=\"#!/edit/{{product.ID}}\"><button type=\"button\" class=\"btn btn-secondary\" ng-click=\"$ctrl.saveData(product)\">Edit</button></a></span>\r\n            <span><a href=\"#!/detail/{{product.ID}}\"><button type=\"button\" class=\"btn btn-info\" ng-click=\"$ctrl.saveData(product)\">Detail</button></a></span>\r\n        <span><a href=\"#!/delete/{{product.ID}}\"><button type=\"button\" class=\"btn btn-danger\" ng-click=\"$ctrl.saveData(product)\">Delete</button></a></span>\r\n        </td>\r\n        \r\n        \r\n    </tr>\r\n    </tbody>\r\n</table>";
+module.exports = "<!-- Input field for filtering products and add button-->\r\n\r\n<div class=\"input-group my-3\">\r\n    <div class=\"input-group-prepend\">\r\n        <span class=\"input-group-text\">Filter Products:</span>\r\n    </div>\r\n    \r\n    <div class=\"col-xs-2\">\r\n        <input ng-model=\"$ctrl.query\" type=\"text\" class=\"form-control\" placeholder=\"...\" aria-label=\"Filter\" aria-describedby=\"basic-addon1\">\r\n    </div>\r\n    \r\n    <div class=\"ml-2\">\r\n        <a href=\"#!/add\"><button type=\"button\" class=\"btn btn-primary\">Add product</button></a>\r\n    </div>\r\n     \r\n</div>\r\n\r\n<!-- Table of products -->\r\n\r\n<table class=\"table table-striped\">\r\n    <thead class= \"thead-dark\">\r\n        <tr>\r\n        <th>ID </th>\r\n        <th>Name</th>\r\n        <th>Number in stock</th>\r\n        <th></th>\r\n        \r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n    <tr ng-repeat=\"product in $ctrl.products | filter:$ctrl.query\">\r\n        <td>{{product.ID}}</td>\r\n        <td>{{product.Name}}</td>\r\n        <td>{{product.NumberStock}}</td>\r\n        <td>\r\n            <span><a href=\"#!/edit/{{product.ID}}\"><button type=\"button\" class=\"btn btn-secondary\">Edit</button></a></span>\r\n            <span><a href=\"#!/detail/{{product.ID}}\"><button type=\"button\" class=\"btn btn-info\">Detail</button></a></span>\r\n            <span><a href=\"#!/delete/{{product.ID}}\"><button type=\"button\" class=\"btn btn-danger\">Delete</button></a></span>\r\n        \r\n        </td>\r\n        \r\n        \r\n    </tr>\r\n    </tbody>\r\n</table>\r\n\r\n";
 
 /***/ }),
 
@@ -39696,7 +39984,8 @@ function () {
     _classCallCheck(this, UpdateProductController);
 
     this.root = "http://localhost:63038/api/Deneme";
-    this.product;
+    this.product = {};
+    this.regex = "\\d+";
     this.http = $http;
     this.routeParams = $routeParams;
     var self = this;
@@ -39712,7 +40001,7 @@ function () {
   _createClass(UpdateProductController, [{
     key: "submit_update",
     value: function submit_update(form) {
-      if (form.Name.$valid) {
+      if (form.$valid) {
         var self = this;
         var data = {
           ID: this.id,
@@ -39773,7 +40062,7 @@ var module = angular__WEBPACK_IMPORTED_MODULE_0___default.a.module("updateProduc
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"list-group list-group-horizontal\">\r\n    <li class=\"list-group-item\">{{\"ID: \"+$ctrl.product.ID}}</li>\r\n    <li class=\"list-group-item\">{{\"Name: \"+$ctrl.product.Name}}</li>\r\n    <li class=\"list-group-item\">{{\"Detail: \"+$ctrl.product.Detail}}</li>\r\n    <li class=\"list-group-item\">{{\"Number in stock: \"+$ctrl.product.NumberStock}}</li>\r\n</ul>\r\n\r\n\r\n<form name=\"$ctrl.updateProductForm\" ng-submit=\"$ctrl.submit_update($ctrl.updateProductForm)\">\r\n        <div class=\"form-group col-md-2 m-4 p-4 border border-primary\" style=\"border-radius: 10%\">\r\n            <label for=\"Name\">Product Name:</label>\r\n            <input type=\"text\" class=\"form-control\" name=\"Name\" ng-model=\"$ctrl.name\" ng-minlength=\"3\" ng-required=\"true\"></input>\r\n            <div ng-messages=\"$ctrl.updateProductForm.Name.$error\">\r\n                <span ng-message=\"required\">Hata! yazı gir</span>\r\n                <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            </div>\r\n            \r\n                        \r\n            <label for=\"Detail\" class=\"mt-1\">Detail:</label>\r\n            <input type=\"text\"  class=\"form-control mt-1\" name=\"Detail\" ng-model=\"$ctrl.detail\" ng-minlength=\"10\" ng-required=\"true\"></input>\r\n            <div ng-messages=\"$ctrl.updateProductForm.Detail.$error && !$ctrl.updateProductForm.Name.$error\">\r\n                <span ng-message=\"required\">Hata! yazı gir</span>\r\n                <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            </div>\r\n\r\n\r\n            <label for=\"Number\" class=\"mt-1\">Number of products:</label>\r\n            <input type=\"text\"  class=\"form-control mt-1\" name=\"Number\" ng-model=\"$ctrl.number\" ng-required=\"true\"></input>\r\n            \r\n            <div ng-messages=\"$ctrl.updateProductForm.Number.$error && !($ctrl.updateProductForm.Detail.$error)\">\r\n                <span ng-message=\"required\">Hata! int gir</span>\r\n                <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            </div>\r\n\r\n\r\n            <button type=\"submit\" class=\"btn btn-primary mt-3\" ng-disabled=\"$ctrl.updateProductForm.$invalid\">Update product</button>\r\n        </div>\r\n</form>\r\n\r\n";
+module.exports = "<ul class=\"list-group list-group-horizontal\">\r\n    <li class=\"list-group-item\">{{\"ID: \"+$ctrl.product.ID}}</li>\r\n    <li class=\"list-group-item\">{{\"Name: \"+$ctrl.product.Name}}</li>\r\n    <li class=\"list-group-item\">{{\"Detail: \"+$ctrl.product.Detail}}</li>\r\n    <li class=\"list-group-item\">{{\"Number in stock: \"+$ctrl.product.NumberStock}}</li>\r\n</ul>\r\n\r\n\r\n<form name=\"$ctrl.updateProductForm\" ng-submit=\"$ctrl.submit_update($ctrl.updateProductForm)\">\r\n        <div class=\"form-group col-md-2 m-4 p-4 border border-primary\" style=\"border-radius: 10%\">\r\n            <label for=\"Name\">Product Name:</label>\r\n            <input type=\"text\" class=\"form-control\" name=\"Name\" ng-model=\"$ctrl.name\" ng-minlength=\"3\" ng-required=\"true\"></input>\r\n            <div ng-messages=\"$ctrl.updateProductForm.Name.$error\">\r\n                    <span ng-message=\"required\">Hata! yazı gir</span>\r\n                    <span ng-message=\"minlength\">Hata! az karakter</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n            </div>\r\n            \r\n                        \r\n            <label for=\"Detail\" class=\"mt-1\">Detail:</label>\r\n            <input type=\"text\"  class=\"form-control mt-1\" name=\"Detail\" ng-model=\"$ctrl.detail\" ng-minlength=\"10\" ng-required=\"true\"></input>\r\n            <div ng-messages=\"$ctrl.updateProductForm.Detail.$error\">\r\n                    <span ng-message=\"required\">Hata! yazı gir</span>\r\n                    <span ng-message=\"minlength\">Hata! az karakter</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n                </div>\r\n\r\n\r\n            <label for=\"Number\" class=\"mt-1\">Number of products:</label>\r\n            <input type=\"text\"  class=\"form-control mt-1\" ng-pattern=\"$ctrl.regex\" name=\"Number\" ng-model=\"$ctrl.number\" ng-required=\"true\"></input>\r\n            \r\n            <div ng-messages=\"$ctrl.updateProductForm.Number.$error\">\r\n                    <span ng-message=\"required\">Hata! int gir</span>\r\n                    <span ng-message=\"pattern\">Sayı giriniz!</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla basamak</span>\r\n            </div>\r\n\r\n\r\n            <button type=\"submit\" class=\"btn btn-secondary mt-3\" ng-disabled=\"$ctrl.updateProductForm.$invalid\">Update product</button>\r\n            <div>{{$ctrl.response}}</div>\r\n        </div>\r\n</form>\r\n\r\n";
 
 /***/ })
 

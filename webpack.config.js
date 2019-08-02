@@ -22,7 +22,7 @@ module.exports = {
                 
             },{
                 test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
+                exclude: /(node_modules|bower_components|spec.js$)/,
                 use:{
                     loader:"babel-loader",
                     options: {
@@ -34,9 +34,19 @@ module.exports = {
                 test: /\.css$/,
                 use:["style-loader" ,"css-loader"]
                 
-            }
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader',
+                options: {
+                  limit: 8192,
+                  name:'[name].[ext]',
+                  outputPath:'assets' //the icons will be stored in dist/assets folder
+                }
+              }
         ],
         
     },
-    devtool: 'source-map'
+    devtool: 'source-map',
+    
 }

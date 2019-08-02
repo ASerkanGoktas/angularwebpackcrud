@@ -17,7 +17,18 @@ class DeleteProductController{
         // will be implemented
 
         const root="http://localhost:63038/api/Deneme/"+this.id;
-        this.http.delete(root);
+
+        const self=this;
+        this.http.delete(root).then(
+            (response)=>{
+                //Success
+
+                self.response="Item deleted successfully!";
+            },
+            (response)=>{
+                self.response="There has been an error deleting item. Error code: "+response.status;
+            }
+        )
     }
 }
 

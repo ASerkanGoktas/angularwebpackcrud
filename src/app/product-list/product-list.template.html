@@ -1,4 +1,4 @@
-<!-- Input field for filtering products and 'add button'-->
+<!-- Input field for filtering products and add button-->
 
 <div class="input-group my-3">
     <div class="input-group-prepend">
@@ -16,6 +16,7 @@
 </div>
 
 <!-- Table of products -->
+
 <table class="table table-striped">
     <thead class= "thead-dark">
         <tr>
@@ -32,12 +33,14 @@
         <td>{{product.Name}}</td>
         <td>{{product.NumberStock}}</td>
         <td>
-            <span><a href="#!/edit/{{product.ID}}"><button type="button" class="btn btn-secondary" ng-click="$ctrl.saveData(product)">Edit</button></a></span>
-            <span><a href="#!/detail/{{product.ID}}"><button type="button" class="btn btn-info" ng-click="$ctrl.saveData(product)">Detail</button></a></span>
-        <span><a href="#!/delete/{{product.ID}}"><button type="button" class="btn btn-danger" ng-click="$ctrl.saveData(product)">Delete</button></a></span>
+            <span><a href="#!/edit/{{product.ID}}"><button type="button" class="btn btn-secondary">Edit</button></a></span>
+            <span><a href="#!/detail/{{product.ID}}"><button type="button" class="btn btn-info">Detail</button></a></span>
+            <span><a href="#!/delete/{{product.ID}}"><button type="button" class="btn btn-danger">Delete</button></a></span>
+        
         </td>
         
         
     </tr>
     </tbody>
 </table>
+

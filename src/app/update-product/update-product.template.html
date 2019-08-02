@@ -11,29 +11,33 @@
             <label for="Name">Product Name:</label>
             <input type="text" class="form-control" name="Name" ng-model="$ctrl.name" ng-minlength="3" ng-required="true"></input>
             <div ng-messages="$ctrl.updateProductForm.Name.$error">
-                <span ng-message="required">Hata! yazı gir</span>
-                <span ng-message="minlength">Hata! az karakter</span>
+                    <span ng-message="required">Hata! yazı gir</span>
+                    <span ng-message="minlength">Hata! az karakter</span>
+                    <span ng-message="maxlength">Hata! fazla karakter</span>
             </div>
             
                         
             <label for="Detail" class="mt-1">Detail:</label>
             <input type="text"  class="form-control mt-1" name="Detail" ng-model="$ctrl.detail" ng-minlength="10" ng-required="true"></input>
-            <div ng-messages="$ctrl.updateProductForm.Detail.$error && !$ctrl.updateProductForm.Name.$error">
-                <span ng-message="required">Hata! yazı gir</span>
-                <span ng-message="minlength">Hata! az karakter</span>
-            </div>
+            <div ng-messages="$ctrl.updateProductForm.Detail.$error">
+                    <span ng-message="required">Hata! yazı gir</span>
+                    <span ng-message="minlength">Hata! az karakter</span>
+                    <span ng-message="maxlength">Hata! fazla karakter</span>
+                </div>
 
 
             <label for="Number" class="mt-1">Number of products:</label>
-            <input type="text"  class="form-control mt-1" name="Number" ng-model="$ctrl.number" ng-required="true"></input>
+            <input type="text"  class="form-control mt-1" ng-pattern="$ctrl.regex" name="Number" ng-model="$ctrl.number" ng-required="true"></input>
             
-            <div ng-messages="$ctrl.updateProductForm.Number.$error && !($ctrl.updateProductForm.Detail.$error)">
-                <span ng-message="required">Hata! int gir</span>
-                <span ng-message="minlength">Hata! az karakter</span>
+            <div ng-messages="$ctrl.updateProductForm.Number.$error">
+                    <span ng-message="required">Hata! int gir</span>
+                    <span ng-message="pattern">Sayı giriniz!</span>
+                    <span ng-message="maxlength">Hata! fazla basamak</span>
             </div>
 
 
-            <button type="submit" class="btn btn-primary mt-3" ng-disabled="$ctrl.updateProductForm.$invalid">Update product</button>
+            <button type="submit" class="btn btn-secondary mt-3" ng-disabled="$ctrl.updateProductForm.$invalid">Update product</button>
+            <div>{{$ctrl.response}}</div>
         </div>
 </form>
 

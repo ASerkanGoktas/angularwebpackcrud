@@ -5,6 +5,8 @@ class AddProductController{
     
     constructor($http){
         this.http=$http;
+        this.regex="\\d+";
+        this.response="";
     }
 
     submit_add(form){

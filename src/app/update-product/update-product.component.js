@@ -5,7 +5,8 @@ class UpdateProductController{
     constructor($http, $routeParams)
     {
         this.root= "http://localhost:63038/api/Deneme";
-        this.product;
+        this.product={};
+        this.regex="\\d+";
 
         this.http=$http;
         this.routeParams=$routeParams;
@@ -17,13 +18,13 @@ class UpdateProductController{
             self.name=self.product.Name;
             self.detail=self.product.Detail;
             self.number=self.product.NumberStock;
-        })
+        });
 
 
     }
 
     submit_update(form){
-        if(form.Name.$valid){
+        if(form.$valid){
 
             const self=this;
 

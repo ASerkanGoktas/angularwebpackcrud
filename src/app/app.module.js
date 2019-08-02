@@ -4,8 +4,11 @@ import productListModule from './product-list/product-list.module';
 import addProductModule from './add-product/add-product.module';
 import updateProductModule from './update-product/update-product.module';
 import deleteProductModule from './delete-product/delete-product.module';
+import productDetailModule from './product-detail/product-detail.module';
 import ngMessages from 'angular-messages';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../node_modules/popper.js/dist/popper.min.js'
+import 'webpack-icons-installer/bootstrap';  //load only bootstrap glyphicons
 
 
 angular.module('productApp', [
@@ -13,8 +16,10 @@ angular.module('productApp', [
     addProductModule,
     updateProductModule,
     deleteProductModule,
+    productDetailModule,
     ngRoute,
-    ngMessages
+    ngMessages,
+
     
     
 ]).config(['$routeProvider',
@@ -27,8 +32,9 @@ function config($routeProvider){
         template: '<update-product></update-product>'
     }).when('/delete/:id', {
         template: "<delete-product></delete-product>"
-    })
-    .otherwise({
+    }).when('/detail/:id', {
+        template: "<product-detail></product-detail>"
+    }).otherwise({
         redirectTo: "/"
     });
 

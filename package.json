@@ -6,7 +6,8 @@
   "scripts": {
     "start": "http-server ./dist -a localhost -p 8000 -c-1",
     "build": "webpack --watch",
-    "dev": "watch 'npm run build' src"
+    "dev": "watch 'npm run build' src",
+    "test": "karma start karma.conf.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,20 +19,34 @@
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
+    "karma-cli": "^2.0.0",
     "popper.js": "^1.15.0",
     "source-map": "^0.7.3",
     "webpack": "^4.37.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "angular-mocks": "^1.7.8",
     "babel-preset-env": "^1.7.0",
     "bootstrap-loader": "^3.0.4",
+    "browserify": "^16.3.0",
     "css-loader": "^3.1.0",
     "html-loader": "^0.5.5",
     "http-server": "^0.11.1",
     "inline-source-map": "^0.6.2",
+    "jasmine-core": "^3.4.0",
+    "karma": "^4.2.0",
+    "karma-babel-preprocessor": "^8.0.1",
+    "karma-browserify": "^6.1.0",
+    "karma-chrome-launcher": "^3.0.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-jquery": "^0.2.4",
+    "karma-ng-html2js-preprocessor": "^1.0.0",
     "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
     "watch": "^1.0.2",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-icons-installer": "^2.0.0",
+    "webpack-karma-jasmine": "^3.0.7"
   }
 }
