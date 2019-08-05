@@ -22,18 +22,24 @@ angular.module('productApp', [
 
     
     
-]).config(['$routeProvider',
+]).config(['$routeProvider', 
 function config($routeProvider){
     $routeProvider.when('/', {
         template: '<product-list></product-list>'
     }).when('/add', {
         template: '<add-product></add-product>'
     }).when('/edit/:id', {
-        template: '<update-product></update-product>'
+        template: (params)=>{
+            return '<update-product id='+params.id+'></update-product>'
+        }
     }).when('/delete/:id', {
-        template: "<delete-product></delete-product>"
+        template: (params)=>{
+            return '<delete-product id='+params.id+'></delete-product>'
+        }
     }).when('/detail/:id', {
-        template: "<product-detail></product-detail>"
+        template: (params)=>{
+            return '<product-detail id='+params.id+'></product-detail>'
+        }
     }).otherwise({
         redirectTo: "/"
     });
@@ -41,28 +47,34 @@ function config($routeProvider){
 
 }
 
-])/*.factory("Productservice", ['$http',($http)=>{
+]).factory("ProductService", ['$http',($http)=>{
     const root= "http://localhost:63038/api/Deneme";
     
-    return {
+    var result={};
+    
 
-        getAll: (onSuccess)=>{
-            $http.get(root).then(onSuccess)
-        },
-        addProduct: (data)=>{
-            $http.post(root, data).then();
-        },
-        updateProduct:(data)=>{
-            $http.put(root+"/"+data.id, data);
-        },
-        deleteProduct:(id)=>{
-            $http.delete(root+"/"+id);
-        },
-        setData:(data)=>{savedData=data},
-        getData:()=>{return savedData}
-    }
+        result.getAll=()=>{
+            return $http.get(root);
+        };
+
+        result.addProduct=(data)=>{
+            return $http.post(root, data);
+        };
+
+        result.updateProduct=(data)=>{
+            return $http.put(root+"/"+data.ID, data);
+        };
+        result.deleteProduct=(id)=>{
+            return $http.delete(root+"/"+id);
+        };
+
+        result.getProduct=(id)=>{
+            return $http.get(root+"/"+id);
+        };
+        
     
     
+        return result;
     
-}]);*/
+}]);
 

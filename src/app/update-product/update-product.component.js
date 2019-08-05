@@ -2,25 +2,25 @@ import tpl from "./update-product.template.html";
 
 class UpdateProductController{
 
-    constructor($http, $routeParams)
+    constructor(ProductService)
     {
-        this.root= "http://localhost:63038/api/Deneme";
+        
         this.product={};
         this.regex="\\d+";
+        this.ps=ProductService;
 
-        this.http=$http;
-        this.routeParams=$routeParams;
+    }
 
+    $onInit(){
+        
         const self=this;
-        this.http.get(this.root+"/"+$routeParams.id).then((response)=>{
+        this.ps.getProduct(this.id).then((response)=>{
             //Success
             self.product=response.data;
             self.name=self.product.Name;
             self.detail=self.product.Detail;
             self.number=self.product.NumberStock;
         });
-
-
     }
 
     submit_update(form){
@@ -34,7 +34,7 @@ class UpdateProductController{
                 Detail: this.detail,
                 NumberStock: this.number
             }
-            this.http.put(this.root+"/"+this.routeParams.id, data).then((response)=>{
+            this.ps.updateProduct(data).then((response)=>{
                 //Success
                 self.response="Success updating product!";
             },
@@ -51,9 +51,10 @@ class UpdateProductController{
 
 }
 
-UpdateProductController.$inject=["$http", "$routeParams"];
+UpdateProductController.$inject=["ProductService"];
 
 export default{
     controller: UpdateProductController,
-    template: tpl
+    template: tpl,
+    bindings: {id:"<"}
 }

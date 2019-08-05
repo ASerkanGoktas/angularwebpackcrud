@@ -39552,6 +39552,8 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_product_template_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-product.template.html */ "./src/app/add-product/add-product.template.html");
 /* harmony import */ var _add_product_template_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_add_product_template_html__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -39563,10 +39565,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var AddProductController =
 /*#__PURE__*/
 function () {
-  function AddProductController($http) {
+  function AddProductController(ProductService) {
     _classCallCheck(this, AddProductController);
 
-    this.http = $http;
+    this.ps = ProductService;
     this.regex = "\\d+";
     this.response = "";
   }
@@ -39583,7 +39585,8 @@ function () {
         };
         var root = "http://localhost:63038/api/Deneme";
         var self = this;
-        this.http.post(root, data).then(function (response) {
+        console.log(_typeof(this.ps.addProduct));
+        this.ps.addProduct(data).then(function (response) {
           //Success
           self.response = "Success!";
         }, function (response) {
@@ -39603,7 +39606,7 @@ function () {
   template: _add_product_template_html__WEBPACK_IMPORTED_MODULE_0___default.a,
   controller: AddProductController
 });
-AddProductController.$inject = ["$http"];
+AddProductController.$inject = ["ProductService"];
 
 /***/ }),
 
@@ -39680,38 +39683,46 @@ angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productApp', [_product_li
   }).when('/add', {
     template: '<add-product></add-product>'
   }).when('/edit/:id', {
-    template: '<update-product></update-product>'
+    template: function template(params) {
+      return '<update-product id=' + params.id + '></update-product>';
+    }
   }).when('/delete/:id', {
-    template: "<delete-product></delete-product>"
+    template: function template(params) {
+      return '<delete-product id=' + params.id + '></delete-product>';
+    }
   }).when('/detail/:id', {
-    template: "<product-detail></product-detail>"
+    template: function template(params) {
+      return '<product-detail id=' + params.id + '></product-detail>';
+    }
   }).otherwise({
     redirectTo: "/"
   });
+}]).factory("ProductService", ['$http', function ($http) {
+  var root = "http://localhost:63038/api/Deneme";
+  var result = {};
+
+  result.getAll = function () {
+    return $http.get(root);
+  };
+
+  result.addProduct = function (data) {
+    return $http.post(root, data);
+  };
+
+  result.updateProduct = function (data) {
+    return $http.put(root + "/" + data.ID, data);
+  };
+
+  result.deleteProduct = function (id) {
+    return $http["delete"](root + "/" + id);
+  };
+
+  result.getProduct = function (id) {
+    return $http.get(root + "/" + id);
+  };
+
+  return result;
 }]);
-/*.factory("Productservice", ['$http',($http)=>{
-  const root= "http://localhost:63038/api/Deneme";
-  
-  return {
-        getAll: (onSuccess)=>{
-          $http.get(root).then(onSuccess)
-      },
-      addProduct: (data)=>{
-          $http.post(root, data).then();
-      },
-      updateProduct:(data)=>{
-          $http.put(root+"/"+data.id, data);
-      },
-      deleteProduct:(id)=>{
-          $http.delete(root+"/"+id);
-      },
-      setData:(data)=>{savedData=data},
-      getData:()=>{return savedData}
-  }
-  
-  
-  
-}]);*/
 
 /***/ }),
 
@@ -39737,28 +39748,28 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var DeleteProductController =
 /*#__PURE__*/
 function () {
-  function DeleteProductController($http, $routeParams) {
-    var _this = this;
-
+  function DeleteProductController(ProductService) {
     _classCallCheck(this, DeleteProductController);
 
     this.product;
-    this.http = $http;
-    this.routeParams = $routeParams;
-    this.id = this.routeParams.id;
-    var root = "http://localhost:63038/api/Deneme";
-    this.http.get(root + "/" + this.id).then(function (response) {
-      _this.product = response.data;
-    });
+    this.ps = ProductService;
   }
 
   _createClass(DeleteProductController, [{
+    key: "$onInit",
+    value: function $onInit() {
+      var _this = this;
+
+      this.ps.getProduct(this.id).then(function (response) {
+        _this.product = response.data;
+      });
+    }
+  }, {
     key: "delete",
     value: function _delete() {
       // will be implemented
-      var root = "http://localhost:63038/api/Deneme/" + this.id;
       var self = this;
-      this.http["delete"](root).then(function (response) {
+      this.ps.deleteProduct(this.id).then(function (response) {
         //Success
         self.response = "Item deleted successfully!";
       }, function (response) {
@@ -39772,9 +39783,12 @@ function () {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   template: _delete_product_template_html__WEBPACK_IMPORTED_MODULE_0___default.a,
-  controller: DeleteProductController
+  controller: DeleteProductController,
+  bindings: {
+    id: "<"
+  }
 });
-DeleteProductController.$inject = ["$http", "$routeParams"];
+DeleteProductController.$inject = ["ProductService"];
 
 /***/ }),
 
@@ -39821,25 +39835,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _product_detail_template_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_product_detail_template_html__WEBPACK_IMPORTED_MODULE_0__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
-var ProductDetailController = function ProductDetailController($http, $routeParams) {
-  _classCallCheck(this, ProductDetailController);
 
-  this.detail = "";
-  var root = "http://localhost:63038/api/Deneme/";
-  var self = this;
-  $http.get(root + $routeParams.id).then(function (response) {
-    self.detail = response.data.Detail;
-  }, function (response) {
-    self.detail = "Could not fetch detail. Error Code: " + response.status;
-  });
-};
+var ProductDetailController =
+/*#__PURE__*/
+function () {
+  function ProductDetailController(ProductService) {
+    _classCallCheck(this, ProductDetailController);
 
-ProductDetailController.inject = ['$http', '$routeParams'];
+    this.detail = "";
+    this.ps = ProductService;
+  }
+
+  _createClass(ProductDetailController, [{
+    key: "$onInit",
+    value: function $onInit() {
+      var _this = this;
+
+      this.ps.getProduct(this.id).then(function (response) {
+        _this.detail = response.data.Detail;
+      }, function (response) {
+        _this.detail = "Could not fetch detail. Error Code: " + response.status;
+      });
+    }
+  }]);
+
+  return ProductDetailController;
+}();
+
+ProductDetailController.inject = ["ProductService"];
 /* harmony default export */ __webpack_exports__["default"] = ({
   controller: ProductDetailController,
-  template: _product_detail_template_html__WEBPACK_IMPORTED_MODULE_0___default.a
+  template: _product_detail_template_html__WEBPACK_IMPORTED_MODULE_0___default.a,
+  bindings: {
+    id: "<"
+  }
 });
 
 /***/ }),
@@ -39887,44 +39921,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _product_list_template_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_product_list_template_html__WEBPACK_IMPORTED_MODULE_0__);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
+var ProductListContoller = function ProductListContoller(ProductService) {
+  _classCallCheck(this, ProductListContoller);
 
-var ProductListContoller =
-/*#__PURE__*/
-function () {
-  function ProductListContoller($http) {
-    _classCallCheck(this, ProductListContoller);
-
-    this.products = [];
-    this.isLoaded = true;
-    var root = "http://localhost:63038/api/Deneme";
-    var self = this;
-    $http.get(root).then(function (response) {
-      //Success
-      self.isLoaded = false;
-      self.products = response.data;
-    }, function (error) {
-      self.isLoaded = false;
-    });
-  }
-
-  _createClass(ProductListContoller, [{
-    key: "onSuccess",
-    value: function onSuccess() {}
-  }]);
-
-  return ProductListContoller;
-}();
+  this.products = [];
+  this.isLoaded = true;
+  var self = this;
+  ProductService.getAll().then(function (response) {
+    //Success
+    self.isLoaded = false;
+    self.products = response.data;
+  }, function (error) {
+    self.isLoaded = false;
+  });
+};
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   template: _product_list_template_html__WEBPACK_IMPORTED_MODULE_0___default.a,
   controller: ProductListContoller
 });
-ProductListContoller.$inject = ["$http"];
+ProductListContoller.$inject = ["ProductService"];
 
 /***/ }),
 
@@ -39980,25 +39998,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var UpdateProductController =
 /*#__PURE__*/
 function () {
-  function UpdateProductController($http, $routeParams) {
+  function UpdateProductController(ProductService) {
     _classCallCheck(this, UpdateProductController);
 
-    this.root = "http://localhost:63038/api/Deneme";
     this.product = {};
     this.regex = "\\d+";
-    this.http = $http;
-    this.routeParams = $routeParams;
-    var self = this;
-    this.http.get(this.root + "/" + $routeParams.id).then(function (response) {
-      //Success
-      self.product = response.data;
-      self.name = self.product.Name;
-      self.detail = self.product.Detail;
-      self.number = self.product.NumberStock;
-    });
+    this.ps = ProductService;
   }
 
   _createClass(UpdateProductController, [{
+    key: "$onInit",
+    value: function $onInit() {
+      var self = this;
+      this.ps.getProduct(this.id).then(function (response) {
+        //Success
+        self.product = response.data;
+        self.name = self.product.Name;
+        self.detail = self.product.Detail;
+        self.number = self.product.NumberStock;
+      });
+    }
+  }, {
     key: "submit_update",
     value: function submit_update(form) {
       if (form.$valid) {
@@ -40009,7 +40029,7 @@ function () {
           Detail: this.detail,
           NumberStock: this.number
         };
-        this.http.put(this.root + "/" + this.routeParams.id, data).then(function (response) {
+        this.ps.updateProduct(data).then(function (response) {
           //Success
           self.response = "Success updating product!";
         }, function (response) {
@@ -40025,10 +40045,13 @@ function () {
   return UpdateProductController;
 }();
 
-UpdateProductController.$inject = ["$http", "$routeParams"];
+UpdateProductController.$inject = ["ProductService"];
 /* harmony default export */ __webpack_exports__["default"] = ({
   controller: UpdateProductController,
-  template: _update_product_template_html__WEBPACK_IMPORTED_MODULE_0___default.a
+  template: _update_product_template_html__WEBPACK_IMPORTED_MODULE_0___default.a,
+  bindings: {
+    id: "<"
+  }
 });
 
 /***/ }),

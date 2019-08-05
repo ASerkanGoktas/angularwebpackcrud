@@ -3,8 +3,8 @@ import tpl from "./add-product.template.html"
 
 class AddProductController{
     
-    constructor($http){
-        this.http=$http;
+    constructor(ProductService){
+        this.ps=ProductService;
         this.regex="\\d+";
         this.response="";
     }
@@ -22,7 +22,8 @@ class AddProductController{
             const root="http://localhost:63038/api/Deneme";
 
             const self=this;
-            this.http.post(root, data).then((response)=>{
+            console.log(typeof(this.ps.addProduct));
+            this.ps.addProduct(data).then((response)=>{
 
                 //Success
                 self.response="Success!";
@@ -45,4 +46,4 @@ export default{
     controller: AddProductController
 }
 
-AddProductController.$inject=["$http"];
+AddProductController.$inject=["ProductService"];

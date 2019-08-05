@@ -74,8 +74,8 @@ describe('addProduct', ()=>{
             
             ($compile, $rootScope)=>{
                 scope= $rootScope.$new();
-                element= angular.element('<add-product></add-product>');
-                element= $compile(element)(scope);
+                
+                element= $compile('<add-product></add-product>')(scope);
                 ctrl=element.controller('addProduct');
                 scope.$apply();
                 

@@ -1,14 +1,16 @@
 import tpl from './delete-product.template.html';
 
 class DeleteProductController{
-    constructor($http, $routeParams){
+    constructor(ProductService){
+        
         this.product;
-        this.http=$http;
-        this.routeParams=$routeParams;
-        this.id=this.routeParams.id;
+        this.ps=ProductService;
 
-        const root="http://localhost:63038/api/Deneme";
-        this.http.get(root+"/"+this.id).then((response)=>{
+        
+    }
+
+    $onInit(){
+        this.ps.getProduct(this.id).then((response)=>{
             this.product=response.data;
         })
     }
@@ -16,10 +18,8 @@ class DeleteProductController{
     delete(){
         // will be implemented
 
-        const root="http://localhost:63038/api/Deneme/"+this.id;
-
         const self=this;
-        this.http.delete(root).then(
+        this.ps.deleteProduct(this.id).then(
             (response)=>{
                 //Success
 
@@ -34,7 +34,8 @@ class DeleteProductController{
 
 export default{
     template: tpl,
-    controller: DeleteProductController
+    controller: DeleteProductController,
+    bindings:{id:"<"}
 }
 
-DeleteProductController.$inject=["$http", "$routeParams"];
+DeleteProductController.$inject=["ProductService"];

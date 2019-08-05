@@ -3,15 +3,14 @@ import tpl from './product-list.template.html';
 class ProductListContoller{
    
    
-    constructor($http)
+    constructor(ProductService)
     {
 
         this.products=[];
         this.isLoaded=true;
-        const root= "http://localhost:63038/api/Deneme";
 
         const self=this;
-        $http.get(root).then((response)=>{
+        ProductService.getAll().then((response)=>{
 
             //Success
             self.isLoaded=false;
@@ -27,9 +26,6 @@ class ProductListContoller{
 
     }
 
-    onSuccess(){
-
-    }
 }
 
     export default {
@@ -37,4 +33,4 @@ class ProductListContoller{
     controller: ProductListContoller
 }
 
-ProductListContoller.$inject=["$http"];
+ProductListContoller.$inject=["ProductService"];

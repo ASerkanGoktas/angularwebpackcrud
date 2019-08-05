@@ -51,6 +51,7 @@ describe('productList', function() {
                 $compile = _$compile_;
                 scope = _$rootScope_.$new();
                 $httpBackend=_$httpBackend_;
+
     
                 $httpBackend.when('GET', 'http://localhost:63038/api/Deneme').respond([{ID:2, Name:"hey", Detail:"asfasfasf", NumberStock:1},{ID:2, Name:"hey", Detail:"asfasfasf", NumberStock:1},{ID:2, Name:"hey", Detail:"asfasfasf", NumberStock:1}]);
                 
@@ -61,7 +62,7 @@ describe('productList', function() {
                 $httpBackend.flush();
                 scope.$digest();
     
-                console.log(element);
+                
                
                 
             }));

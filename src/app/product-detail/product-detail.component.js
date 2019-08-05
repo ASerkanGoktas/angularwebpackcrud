@@ -2,26 +2,32 @@ import tpl from "./product-detail.template.html";
 
 class ProductDetailController{
     
-    constructor($http, $routeParams){
+    constructor(ProductService){
         this.detail="";
 
-        const root="http://localhost:63038/api/Deneme/"
-        const self=this;
-        $http.get(root+$routeParams.id).then(
-            (response)=>{
-                self.detail=response.data.Detail;
-            }, (response)=>{
-                self.detail="Could not fetch detail. Error Code: "+response.status;
+        this.ps=ProductService;
+        
+        
+    }
+
+    $onInit() {
+        
+        this.ps.getProduct(this.id).then(
+            response => {
+                this.detail=response.data.Detail;
+            }, response =>{
+                this.detail = "Could not fetch detail. Error Code: " + response.status;
             }
 
-        )
+        );
     }
 }
 
-ProductDetailController.inject=['$http', '$routeParams'];
+ProductDetailController.inject = ["ProductService"];
 
 export default{
     controller: ProductDetailController,
-    template: tpl
+    template: tpl,
+    bindings:{id:"<"}
 }
 
