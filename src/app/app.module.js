@@ -20,61 +20,61 @@ angular.module('productApp', [
     ngRoute,
     ngMessages,
 
-    
-    
-]).config(['$routeProvider', 
-function config($routeProvider){
-    $routeProvider.when('/', {
-        template: '<product-list></product-list>'
-    }).when('/add', {
-        template: '<add-product></add-product>'
-    }).when('/edit/:id', {
-        template: (params)=>{
-            return '<update-product id='+params.id+'></update-product>'
-        }
-    }).when('/delete/:id', {
-        template: (params)=>{
-            return '<delete-product id='+params.id+'></delete-product>'
-        }
-    }).when('/detail/:id', {
-        template: (params)=>{
-            return '<product-detail id='+params.id+'></product-detail>'
-        }
-    }).otherwise({
-        redirectTo: "/"
-    });
 
 
-}
+]).config(['$routeProvider',
+    function config($routeProvider) {
+        $routeProvider.when('/', {
+            template: '<product-list></product-list>'
+        }).when('/add', {
+            template: '<add-product></add-product>'
+        }).when('/edit/:id', {
+            template: (params) => {
+                return '<update-product id=' + params.id + '></update-product>'
+            }
+        }).when('/delete/:id', {
+            template: (params) => {
+                return '<delete-product id=' + params.id + '></delete-product>'
+            }
+        }).when('/detail/:id', {
+            template: (params) => {
+                return '<product-detail id=' + params.id + '></product-detail>'
+            }
+        }).otherwise({
+            redirectTo: "/"
+        });
 
-]).factory("ProductService", ['$http',($http)=>{
-    const root= "http://localhost:63038/api/Deneme";
-    
-    var result={};
-    
 
-        result.getAll=()=>{
-            return $http.get(root);
-        };
+    }
 
-        result.addProduct=(data)=>{
-            return $http.post(root, data);
-        };
+]).factory("ProductService", ['$http', ($http) => {
+    const root = "http://localhost:63038/api/Deneme";
 
-        result.updateProduct=(data)=>{
-            return $http.put(root+"/"+data.ID, data);
-        };
-        result.deleteProduct=(id)=>{
-            return $http.delete(root+"/"+id);
-        };
+    var result = {};
 
-        result.getProduct=(id)=>{
-            return $http.get(root+"/"+id);
-        };
-        
-    
-    
-        return result;
-    
+
+    result.getAll = () => {
+        return $http.get(root);
+    };
+
+    result.addProduct = (data) => {
+        return $http.post(root, data);
+    };
+
+    result.updateProduct = (data) => {
+        return $http.put(root + "/" + data.ID, data);
+    };
+    result.deleteProduct = (id) => {
+        return $http.delete(root + "/" + id);
+    };
+
+    result.getProduct = (id) => {
+        return $http.get(root + "/" + id);
+    };
+
+
+
+    return result;
+
 }]);
 

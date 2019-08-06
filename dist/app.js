@@ -39552,8 +39552,6 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _add_product_template_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./add-product.template.html */ "./src/app/add-product/add-product.template.html");
 /* harmony import */ var _add_product_template_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_add_product_template_html__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -39583,9 +39581,7 @@ function () {
           Detail: this.detail,
           NumberStock: this.number
         };
-        var root = "http://localhost:63038/api/Deneme";
         var self = this;
-        console.log(_typeof(this.ps.addProduct));
         this.ps.addProduct(data).then(function (response) {
           //Success
           self.response = "Success!";
@@ -39636,7 +39632,7 @@ var module = angular__WEBPACK_IMPORTED_MODULE_0___default.a.module("addProduct",
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form name=\"$ctrl.addProductForm\" ng-submit=\"$ctrl.submit_add($ctrl.addProductForm)\">\r\n    <div class=\"form-group col-md-2 m-4 p-4 border border-primary\" style=\"border-radius: 10%\">\r\n\r\n        <label for=\"Name\">Product Name:</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"Name\" ng-model=\"$ctrl.name\" ng-minlength=\"3\" ng-maxlength=\"12\" ng-required=\"true\"></input>\r\n        <div ng-messages=\"$ctrl.addProductForm.Name.$error\">\r\n            <span ng-message=\"required\">Hata! yazı gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n        </div>\r\n        \r\n                    \r\n        <label for=\"Detail\" class=\"mt-1\">Detail:</label>\r\n        <input type=\"text\"  class=\"form-control mt-1\" name=\"Detail\" ng-model=\"$ctrl.detail\" ng-minlength=\"10\" ng-maxlength=\"40\" ng-required=\"true\"></input>\r\n        <div ng-messages=\"$ctrl.addProductForm.Detail.$error\">\r\n            <span ng-message=\"required\">Hata! yazı gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n        </div>\r\n\r\n\r\n        <label for=\"Number\" class=\"mt-1\">Number of products:</label>\r\n        <input type=\"text\"  class=\"form-control mt-1\" name=\"Number\" ng-pattern=\"$ctrl.regex\" ng-maxlength=\"10\" ng-model=\"$ctrl.number\" ng-required=\"true\"></input>\r\n        \r\n        <div ng-messages=\"$ctrl.addProductForm.Number.$error\">\r\n            <span ng-message=\"required\">Hata! int gir</span>\r\n            <span ng-message=\"pattern\">Sayı giriniz!</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla basamak</span>\r\n\r\n        </div>\r\n\r\n\r\n        <button type=\"submit\" class=\"btn btn-primary mt-3\" ng-disabled=\"$ctrl.addProductForm.$invalid\">Add product</button>\r\n\r\n        <div>{{$ctrl.response}}</div>\r\n    </div>\r\n</form>\r\n\r\n";
+module.exports = "<form name=\"$ctrl.addProductForm\" ng-submit=\"$ctrl.submit_add($ctrl.addProductForm)\">\r\n    <div class=\"form-group col-md-2 m-4 p-4 border border-primary\" style=\"border-radius: 10%\">\r\n\r\n        <label for=\"Name\">Product Name:</label>\r\n        <input type=\"text\" class=\"form-control\" name=\"Name\" ng-model=\"$ctrl.name\" ng-minlength=\"3\" ng-maxlength=\"12\" ng-required=\"true\"></input>\r\n        <div ng-messages=\"$ctrl.addProductForm.Name.$error\">\r\n            <span ng-message=\"required\">Hata! yazı gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n        </div>\r\n        \r\n                    \r\n        <label for=\"Detail\" class=\"mt-1\">Detail:</label>\r\n        <input type=\"text\"  class=\"form-control mt-1\" name=\"Detail\" ng-model=\"$ctrl.detail\" ng-minlength=\"10\" ng-maxlength=\"40\" ng-required=\"true\"></input>\r\n        <div ng-messages=\"$ctrl.addProductForm.Detail.$error\">\r\n            <span ng-message=\"required\">Hata! yazı gir</span>\r\n            <span ng-message=\"minlength\">Hata! az karakter</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n        </div>\r\n\r\n\r\n        <label for=\"Number\" class=\"mt-1\">Number of products:</label>\r\n        <input type=\"text\"  class=\"form-control mt-1\" name=\"Number\" ng-pattern=\"$ctrl.regex\" ng-maxlength=\"10\" ng-model=\"$ctrl.number\" ng-required=\"true\"></input>\r\n        \r\n        <div ng-messages=\"$ctrl.addProductForm.Number.$error\">\r\n            <span ng-message=\"required\">Hata! int gir</span>\r\n            <span ng-message=\"pattern\">Sayı giriniz!</span>\r\n            <span ng-message=\"maxlength\">Hata! fazla basamak</span>\r\n\r\n        </div>\r\n\r\n\r\n        <button type=\"submit\" class=\"btn btn-primary mt-3\" ng-disabled=\"$ctrl.addProductForm.$invalid\">Add product</button>\r\n\r\n        <div id=\"response\">{{$ctrl.response}}</div>\r\n    </div>\r\n</form>\r\n\r\n";
 
 /***/ }),
 
@@ -40009,20 +40005,23 @@ function () {
   _createClass(UpdateProductController, [{
     key: "$onInit",
     value: function $onInit() {
-      var self = this;
+      var _this = this;
+
       this.ps.getProduct(this.id).then(function (response) {
         //Success
-        self.product = response.data;
-        self.name = self.product.Name;
-        self.detail = self.product.Detail;
-        self.number = self.product.NumberStock;
+        _this.product = response.data;
+        _this.name = _this.product.Name;
+        _this.detail = _this.product.Detail;
+        _this.number = _this.product.NumberStock;
       });
     }
   }, {
     key: "submit_update",
     value: function submit_update(form) {
+      var _this2 = this;
+
       if (form.$valid) {
-        var self = this;
+        console.log("hallo");
         var data = {
           ID: this.id,
           Name: this.name,
@@ -40031,7 +40030,7 @@ function () {
         };
         this.ps.updateProduct(data).then(function (response) {
           //Success
-          self.response = "Success updating product!";
+          _this2.response = "Success updating product!";
         }, function (response) {
           //Failure
           self.response = "Error updating product! Error code: " + response.status;
@@ -40085,7 +40084,7 @@ var module = angular__WEBPACK_IMPORTED_MODULE_0___default.a.module("updateProduc
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"list-group list-group-horizontal\">\r\n    <li class=\"list-group-item\">{{\"ID: \"+$ctrl.product.ID}}</li>\r\n    <li class=\"list-group-item\">{{\"Name: \"+$ctrl.product.Name}}</li>\r\n    <li class=\"list-group-item\">{{\"Detail: \"+$ctrl.product.Detail}}</li>\r\n    <li class=\"list-group-item\">{{\"Number in stock: \"+$ctrl.product.NumberStock}}</li>\r\n</ul>\r\n\r\n\r\n<form name=\"$ctrl.updateProductForm\" ng-submit=\"$ctrl.submit_update($ctrl.updateProductForm)\">\r\n        <div class=\"form-group col-md-2 m-4 p-4 border border-primary\" style=\"border-radius: 10%\">\r\n            <label for=\"Name\">Product Name:</label>\r\n            <input type=\"text\" class=\"form-control\" name=\"Name\" ng-model=\"$ctrl.name\" ng-minlength=\"3\" ng-required=\"true\"></input>\r\n            <div ng-messages=\"$ctrl.updateProductForm.Name.$error\">\r\n                    <span ng-message=\"required\">Hata! yazı gir</span>\r\n                    <span ng-message=\"minlength\">Hata! az karakter</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n            </div>\r\n            \r\n                        \r\n            <label for=\"Detail\" class=\"mt-1\">Detail:</label>\r\n            <input type=\"text\"  class=\"form-control mt-1\" name=\"Detail\" ng-model=\"$ctrl.detail\" ng-minlength=\"10\" ng-required=\"true\"></input>\r\n            <div ng-messages=\"$ctrl.updateProductForm.Detail.$error\">\r\n                    <span ng-message=\"required\">Hata! yazı gir</span>\r\n                    <span ng-message=\"minlength\">Hata! az karakter</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n                </div>\r\n\r\n\r\n            <label for=\"Number\" class=\"mt-1\">Number of products:</label>\r\n            <input type=\"text\"  class=\"form-control mt-1\" ng-pattern=\"$ctrl.regex\" name=\"Number\" ng-model=\"$ctrl.number\" ng-required=\"true\"></input>\r\n            \r\n            <div ng-messages=\"$ctrl.updateProductForm.Number.$error\">\r\n                    <span ng-message=\"required\">Hata! int gir</span>\r\n                    <span ng-message=\"pattern\">Sayı giriniz!</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla basamak</span>\r\n            </div>\r\n\r\n\r\n            <button type=\"submit\" class=\"btn btn-secondary mt-3\" ng-disabled=\"$ctrl.updateProductForm.$invalid\">Update product</button>\r\n            <div>{{$ctrl.response}}</div>\r\n        </div>\r\n</form>\r\n\r\n";
+module.exports = "<ul class=\"list-group list-group-horizontal\">\r\n    <li class=\"list-group-item\">{{\"ID: \"+$ctrl.product.ID}}</li>\r\n    <li class=\"list-group-item\">{{\"Name: \"+$ctrl.product.Name}}</li>\r\n    <li class=\"list-group-item\">{{\"Detail: \"+$ctrl.product.Detail}}</li>\r\n    <li class=\"list-group-item\">{{\"Number in stock: \"+$ctrl.product.NumberStock}}</li>\r\n</ul>\r\n\r\n\r\n<form name=\"$ctrl.updateProductForm\" ng-submit=\"$ctrl.submit_update($ctrl.updateProductForm)\">\r\n        <div class=\"form-group col-md-2 m-4 p-4 border border-primary\" style=\"border-radius: 10%\">\r\n            <label for=\"Name\">Product Name:</label>\r\n            <input type=\"text\" class=\"form-control\" name=\"Name\" ng-model=\"$ctrl.name\" ng-minlength=\"3\" ng-maxlength=\"12\" ng-required=\"true\"></input>\r\n            <div ng-messages=\"$ctrl.updateProductForm.Name.$error\">\r\n                    <span ng-message=\"required\">Hata! yazı gir</span>\r\n                    <span ng-message=\"minlength\">Hata! az karakter</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n            </div>\r\n            \r\n                        \r\n            <label for=\"Detail\" class=\"mt-1\">Detail:</label>\r\n            <input type=\"text\"  class=\"form-control mt-1\" name=\"Detail\" ng-model=\"$ctrl.detail\" ng-minlength=\"10\" ng-maxlength=\"40\" ng-required=\"true\"></input>\r\n            <div ng-messages=\"$ctrl.updateProductForm.Detail.$error\">\r\n                    <span ng-message=\"required\">Hata! yazı gir</span>\r\n                    <span ng-message=\"minlength\">Hata! az karakter</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla karakter</span>\r\n                </div>\r\n\r\n\r\n            <label for=\"Number\" class=\"mt-1\">Number of products:</label>\r\n            <input type=\"text\"  class=\"form-control mt-1\" ng-pattern=\"$ctrl.regex\" name=\"Number\" ng-model=\"$ctrl.number\" ng-required=\"true\"></input>\r\n            \r\n            <div ng-messages=\"$ctrl.updateProductForm.Number.$error\">\r\n                    <span ng-message=\"required\">Hata! int gir</span>\r\n                    <span ng-message=\"pattern\">Sayı giriniz!</span>\r\n                    <span ng-message=\"maxlength\">Hata! fazla basamak</span>\r\n            </div>\r\n\r\n\r\n            <button type=\"submit\" class=\"btn btn-secondary mt-3\" ng-disabled=\"$ctrl.updateProductForm.$invalid\">Update product</button>\r\n            <div id=\"response\">{{$ctrl.response}}</div>\r\n        </div>\r\n</form>\r\n\r\n";
 
 /***/ })
 

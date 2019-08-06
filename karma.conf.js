@@ -8,7 +8,7 @@ module.exports= function(config){
         files: [
             '../../dist/app.js',
             '../../node_modules/angular-mocks/angular-mocks.js',
-            '**/*.spec.js',
+            '**/add-product.component.spec.js',
             '**/*.html'
         ],
 

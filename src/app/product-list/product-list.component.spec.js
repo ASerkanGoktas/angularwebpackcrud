@@ -1,87 +1,55 @@
+describe('this will the page that all the products are displayed', () => {
 
-describe('productList', function() {
+    let ProductService;
+    let ctrl, element;
+    let $scope, $compile, $q;
+    let products = [{ ID: 1, Name: "ali", Detail: "Keepin it real!", NumberStock: 3 },
+    { ID: 2, Name: "veli", Detail: "Merhaba", NumberStock: 1 },
+    { ID: 3, Name: "deli", Detail: "Nasılsınız!", NumberStock: 5 }];
+    let component = '<product-list></product-list>';
 
-    beforeEach(module('productList'));
+    var finder= (selector, html) =>{
+        return angular.element(html.find(selector));
+    };
 
-    beforeEach(inject(
-        ($templateCache)=>{
-          //Boilerplate of template   
-          $templateCache.put('product-list.template.html');
+    beforeEach(module('productApp'));
 
-}));
+    beforeEach(inject((_ProductService_, _$compile_, _$rootScope_, _$q_) => {
 
-    describe('ProductListController', ()=>{
-        var $httpBackend, ctrl;
+        ProductService = _ProductService_;
+        $scope = _$rootScope_.$new();
+        $compile = _$compile_;
+        $q = _$q_;
+    }));
 
-        beforeEach(inject(
-            ($componentController, _$httpBackend_)=>{
-                $httpBackend=_$httpBackend_;
-                $httpBackend.when('GET', 'http://localhost:63038/api/Deneme').respond([{ID:2, Name:"hey", Detail:"asfasfasf", NumberStock:1}]);
-
-                ctrl= $componentController('productList');
-            })
-            );
-
-
-        it("should create a 'products' property with 1 element fetched with $http", ()=>{
-            jasmine.addCustomEqualityTester(angular.equals);
-
-            expect(ctrl.products).toEqual([]);
-
-            $httpBackend.expectGET('http://localhost:63038/api/Deneme');
-            $httpBackend.flush();
-            expect(ctrl.products).toEqual([{ID:2, Name:"hey", Detail:"asfasfasf", NumberStock:1}]);
+    beforeEach( done => {
+        spyOn(ProductService, "getAll").and.callFake(() => {
+            done();
+            return $q.when({ "data": products });
         });
+
+        element = $compile(component)($scope);
+        ctrl = element.controller('productList');
 
     });
 
-    describe('testing the templates of components. There will be an error raised if a faulty html is produced.', ()=>{
-    
+    it('ProductService should fetch all of the products, therefore, when the productListController is being initialized, `getAll function should be called.`', () => {
+        expect(ProductService.getAll).toHaveBeenCalled();
+    });
 
-        describe('template: product-list. There will be a table which has rows of products', ()=>{
-            var $compile;
-            var scope;
-            var $httpBackend;
-            var element;
-            var compiled;
-            var ctrl;
-            
-            // Angular strips the underscores when injecting
-            beforeEach(inject(function(_$compile_, _$rootScope_, _$httpBackend_) {
-                $compile = _$compile_;
-                scope = _$rootScope_.$new();
-                $httpBackend=_$httpBackend_;
+    it('should list correct elements', () => {
+        $scope.$digest();
+        var rows=element.find('tr');
 
-    
-                $httpBackend.when('GET', 'http://localhost:63038/api/Deneme').respond([{ID:2, Name:"hey", Detail:"asfasfasf", NumberStock:1},{ID:2, Name:"hey", Detail:"asfasfasf", NumberStock:1},{ID:2, Name:"hey", Detail:"asfasfasf", NumberStock:1}]);
-                
-                element= angular.element('<product-list></product-list>');
-                element=$compile(element)(scope);
-                ctrl=element.controller('productList');
-                
-                $httpBackend.flush();
-                scope.$digest();
-    
-                
-               
-                
-            }));
-    
-            it('should contain 3 rows since there are 3 products', ()=>{
-    
-                var elm_row= element.find('tbody').find('tr');
-        
-                
-                expect(elm_row.length).toBe(3);
-    
-    
-            });
-    
-            
-    
-    
+        let i=1;
+
+        //Traversing rows and checking if there are correct products corresponding to the data fetched from server
+        products.forEach( product => {
+            expect(angular.element(rows[i]).html()).toContain(product.ID);
+            expect(angular.element(rows[i]).html()).toContain(product.Name);
+            expect(angular.element(rows[i++]).html()).toContain(product.NumberStock);
         });
+        
     });
 
 });
-

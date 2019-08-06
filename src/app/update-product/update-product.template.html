@@ -9,7 +9,7 @@
 <form name="$ctrl.updateProductForm" ng-submit="$ctrl.submit_update($ctrl.updateProductForm)">
         <div class="form-group col-md-2 m-4 p-4 border border-primary" style="border-radius: 10%">
             <label for="Name">Product Name:</label>
-            <input type="text" class="form-control" name="Name" ng-model="$ctrl.name" ng-minlength="3" ng-required="true"></input>
+            <input type="text" class="form-control" name="Name" ng-model="$ctrl.name" ng-minlength="3" ng-maxlength="12" ng-required="true"></input>
             <div ng-messages="$ctrl.updateProductForm.Name.$error">
                     <span ng-message="required">Hata! yazı gir</span>
                     <span ng-message="minlength">Hata! az karakter</span>
@@ -18,7 +18,7 @@
             
                         
             <label for="Detail" class="mt-1">Detail:</label>
-            <input type="text"  class="form-control mt-1" name="Detail" ng-model="$ctrl.detail" ng-minlength="10" ng-required="true"></input>
+            <input type="text"  class="form-control mt-1" name="Detail" ng-model="$ctrl.detail" ng-minlength="10" ng-maxlength="40" ng-required="true"></input>
             <div ng-messages="$ctrl.updateProductForm.Detail.$error">
                     <span ng-message="required">Hata! yazı gir</span>
                     <span ng-message="minlength">Hata! az karakter</span>
@@ -37,7 +37,7 @@
 
 
             <button type="submit" class="btn btn-secondary mt-3" ng-disabled="$ctrl.updateProductForm.$invalid">Update product</button>
-            <div>{{$ctrl.response}}</div>
+            <div id="response">{{$ctrl.response}}</div>
         </div>
 </form>
 

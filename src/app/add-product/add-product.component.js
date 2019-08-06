@@ -18,11 +18,9 @@ class AddProductController{
                 Detail:this.detail,
                 NumberStock: this.number
             };
-    
-            const root="http://localhost:63038/api/Deneme";
 
             const self=this;
-            console.log(typeof(this.ps.addProduct));
+            
             this.ps.addProduct(data).then((response)=>{
 
                 //Success

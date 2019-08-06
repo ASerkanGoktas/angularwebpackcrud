@@ -13,21 +13,20 @@ class UpdateProductController{
 
     $onInit(){
         
-        const self=this;
-        this.ps.getProduct(this.id).then((response)=>{
+        this.ps.getProduct(this.id).then(response => {
             //Success
-            self.product=response.data;
-            self.name=self.product.Name;
-            self.detail=self.product.Detail;
-            self.number=self.product.NumberStock;
+            this.product=response.data;
+            this.name=this.product.Name;
+            this.detail=this.product.Detail;
+            this.number=this.product.NumberStock;
         });
     }
 
     submit_update(form){
         if(form.$valid){
 
-            const self=this;
-
+            
+            console.log("hallo");
             const data={
                 ID:this.id,
                 Name: this.name,
@@ -36,7 +35,7 @@ class UpdateProductController{
             }
             this.ps.updateProduct(data).then((response)=>{
                 //Success
-                self.response="Success updating product!";
+                this.response="Success updating product!";
             },
             
             (response)=>{
