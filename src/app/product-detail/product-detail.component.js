@@ -4,10 +4,7 @@ class ProductDetailController{
     
     constructor(ProductService){
         this.detail="";
-
         this.ps=ProductService;
-        
-        
     }
 
     $onInit() {
@@ -17,9 +14,7 @@ class ProductDetailController{
                 this.detail=response.data.Detail;
             }, response =>{
                 this.detail = "Could not fetch detail. Error Code: " + response.status;
-            }
-
-        );
+            });
     }
 }
 
