@@ -5,8 +5,8 @@ class DeleteProductController{
         
         this.product;
         this.ps=ProductService;
-
-        
+        this.successMessage="Item deleted successfully!";
+        this.errorMessage="There has been an error deleting item. Error code: ";
     }
 
     $onInit(){
@@ -23,10 +23,10 @@ class DeleteProductController{
             (response)=>{
                 //Success
 
-                self.response="Item deleted successfully!";
+                self.response=self.successMessage;
             },
             (response)=>{
-                self.response="There has been an error deleting item. Error code: "+response.status;
+                self.response=self.errorMessage+response.status;
             }
         )
     }

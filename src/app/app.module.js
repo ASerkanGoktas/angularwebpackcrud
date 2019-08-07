@@ -5,6 +5,7 @@ import addProductModule from './add-product/add-product.module';
 import updateProductModule from './update-product/update-product.module';
 import deleteProductModule from './delete-product/delete-product.module';
 import productDetailModule from './product-detail/product-detail.module';
+import ProductService from './services/product-service.service';
 import ngMessages from 'angular-messages';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../node_modules/popper.js/dist/popper.min.js'
@@ -47,34 +48,5 @@ angular.module('productApp', [
 
     }
 
-]).factory("ProductService", ['$http', ($http) => {
-    const root = "http://localhost:63038/api/Deneme";
-
-    var result = {};
-
-
-    result.getAll = () => {
-        return $http.get(root);
-    };
-
-    result.addProduct = (data) => {
-        return $http.post(root, data);
-    };
-
-    result.updateProduct = (data) => {
-        return $http.put(root + "/" + data.ID, data);
-    };
-    result.deleteProduct = (id) => {
-        return $http.delete(root + "/" + id);
-    };
-
-    result.getProduct = (id) => {
-        return $http.get(root + "/" + id);
-    };
-
-
-
-    return result;
-
-}]);
+]).factory("ProductService", ['$http', $http => new ProductService($http)]);
 

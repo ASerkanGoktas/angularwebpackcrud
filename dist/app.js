@@ -39654,13 +39654,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _update_product_update_product_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./update-product/update-product.module */ "./src/app/update-product/update-product.module.js");
 /* harmony import */ var _delete_product_delete_product_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./delete-product/delete-product.module */ "./src/app/delete-product/delete-product.module.js");
 /* harmony import */ var _product_detail_product_detail_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./product-detail/product-detail.module */ "./src/app/product-detail/product-detail.module.js");
-/* harmony import */ var angular_messages__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! angular-messages */ "./node_modules/angular-messages/index.js");
-/* harmony import */ var angular_messages__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(angular_messages__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
-/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _node_modules_popper_js_dist_popper_min_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../node_modules/popper.js/dist/popper.min.js */ "./node_modules/popper.js/dist/popper.min.js");
-/* harmony import */ var webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! webpack-icons-installer/bootstrap */ "./node_modules/webpack-icons-installer/bootstrap.js");
-/* harmony import */ var webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _services_product_service_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/product-service.service */ "./src/app/services/product-service.service.js");
+/* harmony import */ var angular_messages__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! angular-messages */ "./node_modules/angular-messages/index.js");
+/* harmony import */ var angular_messages__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(angular_messages__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _node_modules_popper_js_dist_popper_min_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../node_modules/popper.js/dist/popper.min.js */ "./node_modules/popper.js/dist/popper.min.js");
+/* harmony import */ var webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! webpack-icons-installer/bootstrap */ "./node_modules/webpack-icons-installer/bootstrap.js");
+/* harmony import */ var webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(webpack_icons_installer_bootstrap__WEBPACK_IMPORTED_MODULE_11__);
+
 
 
 
@@ -39673,7 +39675,7 @@ __webpack_require__.r(__webpack_exports__);
 
  //load only bootstrap glyphicons
 
-angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productApp', [_product_list_product_list_module__WEBPACK_IMPORTED_MODULE_2__["default"], _add_product_add_product_module__WEBPACK_IMPORTED_MODULE_3__["default"], _update_product_update_product_module__WEBPACK_IMPORTED_MODULE_4__["default"], _delete_product_delete_product_module__WEBPACK_IMPORTED_MODULE_5__["default"], _product_detail_product_detail_module__WEBPACK_IMPORTED_MODULE_6__["default"], angular_route__WEBPACK_IMPORTED_MODULE_1___default.a, angular_messages__WEBPACK_IMPORTED_MODULE_7___default.a]).config(['$routeProvider', function config($routeProvider) {
+angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productApp', [_product_list_product_list_module__WEBPACK_IMPORTED_MODULE_2__["default"], _add_product_add_product_module__WEBPACK_IMPORTED_MODULE_3__["default"], _update_product_update_product_module__WEBPACK_IMPORTED_MODULE_4__["default"], _delete_product_delete_product_module__WEBPACK_IMPORTED_MODULE_5__["default"], _product_detail_product_detail_module__WEBPACK_IMPORTED_MODULE_6__["default"], angular_route__WEBPACK_IMPORTED_MODULE_1___default.a, angular_messages__WEBPACK_IMPORTED_MODULE_8___default.a]).config(['$routeProvider', function config($routeProvider) {
   $routeProvider.when('/', {
     template: '<product-list></product-list>'
   }).when('/add', {
@@ -39694,30 +39696,7 @@ angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('productApp', [_product_li
     redirectTo: "/"
   });
 }]).factory("ProductService", ['$http', function ($http) {
-  var root = "http://localhost:63038/api/Deneme";
-  var result = {};
-
-  result.getAll = function () {
-    return $http.get(root);
-  };
-
-  result.addProduct = function (data) {
-    return $http.post(root, data);
-  };
-
-  result.updateProduct = function (data) {
-    return $http.put(root + "/" + data.ID, data);
-  };
-
-  result.deleteProduct = function (id) {
-    return $http["delete"](root + "/" + id);
-  };
-
-  result.getProduct = function (id) {
-    return $http.get(root + "/" + id);
-  };
-
-  return result;
+  return new _services_product_service_service__WEBPACK_IMPORTED_MODULE_7__["default"]($http);
 }]);
 
 /***/ }),
@@ -39749,6 +39728,8 @@ function () {
 
     this.product;
     this.ps = ProductService;
+    this.successMessage = "Item deleted successfully!";
+    this.errorMessage = "There has been an error deleting item. Error code: ";
   }
 
   _createClass(DeleteProductController, [{
@@ -39767,9 +39748,9 @@ function () {
       var self = this;
       this.ps.deleteProduct(this.id).then(function (response) {
         //Success
-        self.response = "Item deleted successfully!";
+        self.response = self.successMessage;
       }, function (response) {
-        self.response = "There has been an error deleting item. Error code: " + response.status;
+        self.response = self.errorMessage + response.status;
       });
     }
   }]);
@@ -39814,7 +39795,7 @@ var module = angular__WEBPACK_IMPORTED_MODULE_0___default.a.module('deleteProduc
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"list-group list-group-horizontal\">\r\n    <li class=\"list-group-item\">{{\"ID: \"+$ctrl.product.ID}}</li>\r\n    <li class=\"list-group-item\">{{\"Name: \"+$ctrl.product.Name}}</li>\r\n    <li class=\"list-group-item\">{{\"Detail: \"+$ctrl.product.Detail}}</li>\r\n    <li class=\"list-group-item\">{{\"Number in stock: \"+$ctrl.product.NumberStock}}</li>\r\n</ul>\r\n\r\n<button type=\"submit\" class=\"btn btn-danger mt-2\" ng-click=\"$ctrl.delete()\">Are you sure about deleting this item?</button>\r\n<span>{{$ctrl.response}}</span>\r\n\r\n";
+module.exports = "<ul class=\"list-group list-group-horizontal\">\r\n    <li class=\"list-group-item\">{{\"ID: \"+$ctrl.product.ID}}</li>\r\n    <li class=\"list-group-item\">{{\"Name: \"+$ctrl.product.Name}}</li>\r\n    <li class=\"list-group-item\">{{\"Detail: \"+$ctrl.product.Detail}}</li>\r\n    <li class=\"list-group-item\">{{\"Number in stock: \"+$ctrl.product.NumberStock}}</li>\r\n</ul>\r\n\r\n<button type=\"submit\" class=\"btn btn-danger mt-2\" ng-click=\"$ctrl.delete()\">Are you sure about deleting this item?</button>\r\n<span id=\"response\">{{$ctrl.response}}</span>\r\n\r\n";
 
 /***/ }),
 
@@ -39972,6 +39953,66 @@ module.exports = "<!-- Input field for filtering products and add button-->\r\n\
 
 /***/ }),
 
+/***/ "./src/app/services/product-service.service.js":
+/*!*****************************************************!*\
+  !*** ./src/app/services/product-service.service.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var ProductService =
+/*#__PURE__*/
+function () {
+  function ProductService($http) {
+    _classCallCheck(this, ProductService);
+
+    this.$http = $http;
+    this.root = "http://localhost:63038/api/Deneme";
+  }
+
+  _createClass(ProductService, [{
+    key: "getAll",
+    value: function getAll() {
+      return this.$http.get(this.root);
+    }
+  }, {
+    key: "addProduct",
+    value: function addProduct(data) {
+      return this.$http.post(this.root, data);
+    }
+  }, {
+    key: "updateProduct",
+    value: function updateProduct(data) {
+      return this.$http.put(this.root + "/" + data.ID, data);
+    }
+  }, {
+    key: "deleteProduct",
+    value: function deleteProduct(id) {
+      return this.$http["delete"](this.root + "/" + id);
+    }
+  }, {
+    key: "getProduct",
+    value: function getProduct(id) {
+      return this.$http.get(this.root + "/" + id);
+    }
+  }]);
+
+  return ProductService;
+}();
+
+ProductService.$inject = ["$http"];
+/* harmony default export */ __webpack_exports__["default"] = (ProductService);
+
+/***/ }),
+
 /***/ "./src/app/update-product/update-product.component.js":
 /*!************************************************************!*\
   !*** ./src/app/update-product/update-product.component.js ***!
@@ -40019,6 +40060,8 @@ function () {
     key: "submit_update",
     value: function submit_update(form) {
       var _this2 = this;
+
+      console.log("lololooyyy");
 
       if (form.$valid) {
         console.log("hallo");

@@ -23,6 +23,7 @@ class UpdateProductController{
     }
 
     submit_update(form){
+        console.log("lololooyyy");
         if(form.$valid){
 
             
